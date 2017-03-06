@@ -1,0 +1,9 @@
+/* line 3, ../scss/main.scss */
+body p {
+  color: blue;
+}
+
+/* line 8, ../scss/main.scss */
+head {
+  background-size: cover;
+}
