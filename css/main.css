@@ -1,18 +1,18 @@
-/* line 5, ../scss/main.scss */
+/* line 6, ../scss/main.scss */
 body p {
   color: blue;
 }
 
-/* line 10, ../scss/main.scss */
+/* line 11, ../scss/main.scss */
 head {
   background-size: cover;
 }
 
-/* line 14, ../scss/main.scss */
+/* line 15, ../scss/main.scss */
 .cool {
   color: white;
 }
-/* line 17, ../scss/main.scss */
+/* line 18, ../scss/main.scss */
 .cool a {
   background-size: 122px;
 }
