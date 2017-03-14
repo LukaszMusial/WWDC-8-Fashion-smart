@@ -1,30 +1,23 @@
-/* line 80, social/*.png */
 .social-sprite {
   background-image: url('/img/social-s969358ebca.png');
   background-repeat: no-repeat;
 }
 
-/* line 64, brands/*.png */
 .brands-sprite {
   background-image: url('/img/brands-s870ecedb9f.png');
   background-repeat: no-repeat;
 }
 
-/* line 9, ../scss/main.scss */
-body p {
-  color: blue;
+header {
+  height: 80px;
+  display: inline-block;
+  display: flex;
+  flex-direction: row;
 }
-
-/* line 14, ../scss/main.scss */
-head {
-  background-size: cover;
+header .logoIcons-wrapper {
+  background-color: #ffffff;
+  width: 72%;
 }
-
-/* line 18, ../scss/main.scss */
-.cool {
-  color: white;
-}
-/* line 21, ../scss/main.scss */
-.cool a {
-  background-size: 122px;
+header .menu-wrapper {
+  background-color: black;
 }

@@ -5,20 +5,26 @@
 @import 'brands/*.png';
 // @import 'projects/*.jpg';
 
-body {
-	p	{
-		color: blue;
+$grids: 15;
+$gutters: 1/3;
+
+$primary-color: #ffffff;
+$secondary-color: invert($primary-color);
+
+header	{
+	height: 80px;
+	display: inline-block;
+	display: flex;
+	flex-direction: row;
+
+	.logoIcons-wrapper	{
+		background-color: $primary-color;
+		width: 72%;
+
 	}
-}
+	.menu-wrapper	{
+		background-color: $secondary-color;
+		
 
-head {
-	background-size: cover;
-}
-
-.cool	{
-	color: white;
-
-	a {
-		background-size: 122px;
 	}
 }
