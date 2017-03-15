@@ -22,3 +22,55 @@ header .menu-wrapper {
   background-color: black;
   width: 28%;
 }
+header .menu-wrapper ul {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  list-style: none;
+}
+header .menu-wrapper ul li {
+  text-align: center;
+}
+header .menu-wrapper ul li a {
+  padding: 10px 0;
+  color: #cccccc;
+  display: block;
+  text-decoration: none;
+}
+header .menu-wrapper ul li a:hover {
+  background-color: #262626;
+}
+
+.menu-icon .navicon:before, .menu-icon .navicon:after {
+  display: block;
+  content: '';
+  background-color: #ffffff;
+  position: absolute;
+  top: 5px;
+  height: 1px;
+  width: 15px;
+}
+
+.menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  padding: 33px 30px;
+  position: relative;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.menu-icon .navicon {
+  display: block;
+  background-color: #ffffff;
+  height: 1px;
+  width: 15px;
+  position: relative;
+}
+.menu-icon .navicon:before {
+  top: 7px;
+}
+.menu-icon .navicon:after {
+  top: -7px;
+}
