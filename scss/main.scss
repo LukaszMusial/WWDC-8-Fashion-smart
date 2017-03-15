@@ -1,9 +1,14 @@
 @import 'breakpoint';
 @import 'singularitygs';
+@import 'compass/css3';
 
-@import 'social/*.png';
+@import 'logo-social/*.png';
 @import 'brands/*.png';
 // @import 'projects/*.jpg';
+
+@include all-logo-social-sprites;
+
+// ------------------ variables ---------------------
 
 $grids: 15;
 $gutters: 1/3;
@@ -11,21 +16,55 @@ $gutters: 1/3;
 $primary-color: #ffffff;
 $secondary-color: invert($primary-color);
 
+// ------------------ mixins ---------------------
+
+
+
+// ------------------ sass ---------------------
+
 header	{
 	height: 80px;
-	display: inline-block;
 	display: flex;
 	flex-direction: row;
+	box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+	position: fixed;
+	width: 100%;
 
-	.logoIcons-wrapper	{
-		background-color: $primary-color;
-		width: 72%;
-
+	ul	{
+		list-style: none;
+		li a	{
+			display: block;
+			text-decoration: none;
+			@include user-select(none);
+		}
 	}
-	.menu-wrapper	{
-		background-color: $secondary-color;
-		width: 28%;
-		
+}
 
+.logo-social-wrapper	{
+	background-color: $primary-color;
+	width: 72%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	ul	{
+		display: inline;
+		background-color: blue;
+		li a	{
+		height: 37px;
+		width:36px;
+		text-indent: -9999px
+		}		
 	}
+}
+.logo-social-logo	{
+	height: 45px;
+	width: 100px;
+}
+.menu-wrapper	{
+	background-color: $secondary-color;
+	width: 28%;
+}
+
+.clear-list-style	{
+	text-decoration: none;
 }
