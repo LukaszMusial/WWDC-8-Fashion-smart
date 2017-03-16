@@ -1,10 +1,10 @@
 .logo-social-sprite, .logo-social-facebook, .logo-social-instagram, .logo-social-linkedin, .logo-social-logo, .logo-social-twitter {
-  background-image: url('/img/logo-social-sc934184282.png');
+  background-image: url('../img/logo-social-s0466bc2485.png');
   background-repeat: no-repeat;
 }
 
 .brands-sprite {
-  background-image: url('/img/brands-s870ecedb9f.png');
+  background-image: url('../img/brands-s870ecedb9f.png');
   background-repeat: no-repeat;
 }
 
@@ -13,19 +13,19 @@
 }
 
 .logo-social-instagram {
-  background-position: 0 -36px;
+  background-position: -37px 0;
 }
 
 .logo-social-linkedin {
-  background-position: 0 -72px;
+  background-position: -74px 0;
 }
 
 .logo-social-logo {
-  background-position: 0 -108px;
+  background-position: -111px 0;
 }
 
 .logo-social-twitter {
-  background-position: 0 -153px;
+  background-position: -211px 0;
 }
 
 header {
@@ -38,14 +38,14 @@ header {
 }
 header ul {
   list-style: none;
-}
-header ul li a {
-  display: block;
-  text-decoration: none;
   -moz-user-select: -moz-none;
   -ms-user-select: none;
   -webkit-user-select: none;
   user-select: none;
+}
+header ul li a {
+  display: block;
+  text-decoration: none;
 }
 
 .logo-social-wrapper {
@@ -55,11 +55,11 @@ header ul li a {
   flex-direction: row;
   justify-content: space-between;
 }
-.logo-social-wrapper ul {
+.logo-social-wrapper ul li {
   display: inline;
-  background-color: blue;
 }
 .logo-social-wrapper ul li a {
+  display: inline-block;
   height: 37px;
   width: 36px;
   text-indent: -9999px;
@@ -68,6 +68,8 @@ header ul li a {
 .logo-social-logo {
   height: 45px;
   width: 100px;
+  text-indent: -9999px;
+  cursor: pointer;
 }
 
 .menu-wrapper {
@@ -79,6 +81,7 @@ header ul li a {
   padding: 0;
   background-color: #000000;
   list-style: none;
+  max-height: 0;
 }
 .menu-wrapper ul li {
   text-align: center;
@@ -86,8 +89,6 @@ header ul li a {
 .menu-wrapper ul li a {
   padding: 10px 0;
   color: #cccccc;
-  display: block;
-  text-decoration: none;
 }
 .menu-wrapper ul li a:hover {
   background-color: #262626;
@@ -125,4 +126,12 @@ header ul li a {
 }
 .menu-icon .navicon:after {
   top: -7px;
+}
+
+.menu-btn {
+  display: none;
+}
+
+.menu-icon:checked ~ .menu-wrapper ul {
+  max-height: 500px;
 }

@@ -10,6 +10,7 @@ sass_dir = "scss"
 images_dir = "img"
 javascripts_dir = "js"
 line_comments = false
+relative_assets = true
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed

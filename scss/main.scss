@@ -2,6 +2,7 @@
 @import 'singularitygs';
 @import 'compass/css3';
 
+$logo-social-layout: horizontal;
 @import 'logo-social/*.png';
 @import 'brands/*.png';
 // @import 'projects/*.jpg';
@@ -32,10 +33,10 @@ header	{
 
 	ul	{
 		list-style: none;
+		@include user-select(none);
 		li a	{
 			display: block;
 			text-decoration: none;
-			@include user-select(none);
 		}
 	}
 }
@@ -47,12 +48,14 @@ header	{
 	flex-direction: row;
 	justify-content: space-between;
 	ul	{
-		display: inline;
-		background-color: blue;
-		li a	{
-		height: 37px;
-		width:36px;
-		text-indent: -9999px
+		li	{
+			display: inline;
+			a	{
+				display: inline-block;
+				height: 37px;
+				width: 36px;
+				text-indent: -9999px;
+			}
 		}		
 	}
 }
@@ -60,7 +63,11 @@ header	{
 .logo-social-logo	{
 	height: 45px;
 	width: 100px;
+	text-indent: -9999px;
+	cursor: pointer;
 }
+
+// ------------------ menu ---------------------
 
 .menu-wrapper	{
 	background-color: $secondary-color;
@@ -70,14 +77,12 @@ header	{
 		padding: 0;
 		background-color: #000000;
 		list-style: none;
-		// max-height: 0;
+		max-height: 0;
 		li	{
 			text-align: center;
 			a	{
 				padding: 10px 0;
 				color: #cccccc;
-				display: block;
-				text-decoration: none;
 				&:hover	{
 					background-color: #262626;
 				}
@@ -85,9 +90,6 @@ header	{
 		}
 	}
 }
-
-
-
 
 %naviconbars	{
 	display: block;
@@ -103,7 +105,6 @@ header	{
 	display: inline-block;
 	padding: 33px 30px;
 	position: relative;
-	// background: green;
 	@include user-select(none);
 	.navicon	{
 		display: block;
@@ -120,4 +121,11 @@ header	{
 			top: -7px;
 		}
 	}
+}
+.menu-btn	{
+	display: none
+}
+
+.menu-icon:checked ~ .menu-wrapper ul	{
+	max-height: 500px;
 }
