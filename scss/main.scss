@@ -56,15 +56,68 @@ header	{
 		}		
 	}
 }
+
 .logo-social-logo	{
 	height: 45px;
 	width: 100px;
 }
+
 .menu-wrapper	{
 	background-color: $secondary-color;
 	width: 28%;
+	ul	{
+		margin: 0;
+		padding: 0;
+		background-color: #000000;
+		list-style: none;
+		// max-height: 0;
+		li	{
+			text-align: center;
+			a	{
+				padding: 10px 0;
+				color: #cccccc;
+				display: block;
+				text-decoration: none;
+				&:hover	{
+					background-color: #262626;
+				}
+			}
+		}
+	}
 }
 
-.clear-list-style	{
-	text-decoration: none;
+
+
+
+%naviconbars	{
+	display: block;
+	content: '';
+	background-color: $primary-color;
+	position: absolute;
+	top:5px;
+	height: 1px;
+	width: 15px
+}
+.menu-icon	{
+	cursor: pointer;
+	display: inline-block;
+	padding: 33px 30px;
+	position: relative;
+	// background: green;
+	@include user-select(none);
+	.navicon	{
+		display: block;
+		background-color: $primary-color;
+		height: 1px;
+		width: 15px;
+		position: relative;
+		&:before	{
+			@extend %naviconbars;
+			top: 7px;
+		}
+		&:after	{
+			@extend %naviconbars;
+			top: -7px;
+		}
+	}
 }
