@@ -30,7 +30,6 @@ header	{
 	box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
 	position: fixed;
 	width: 100%;
-
 	ul	{
 		list-style: none;
 		@include user-select(none);
@@ -47,7 +46,9 @@ header	{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	align-items: center;
 	ul	{
+		margin-right: 30px;
 		li	{
 			display: inline;
 			a	{
@@ -61,6 +62,7 @@ header	{
 }
 
 .logo-social-logo	{
+	margin-left: 18%;
 	height: 45px;
 	width: 100px;
 	text-indent: -9999px;
@@ -68,30 +70,48 @@ header	{
 }
 
 // ------------------ menu ---------------------
-
-.menu-wrapper	{
+.menu	{
+	display: flex;
+	flex-direction: column;
 	background-color: $secondary-color;
 	width: 28%;
+	height: 100%;
+
+}
+.menu-wrapper	{
+	padding-top: 5px;
+	width: 100%;
 	ul	{
 		margin: 0;
 		padding: 0;
 		background-color: #000000;
 		list-style: none;
+		overflow: hidden;
 		max-height: 0;
+		@include transition-property(max-height);
+		@include transition-duration(1s);
+		// @include transition-timing-function(ease-out);
+		// transition: max-height .2s ease-out;
 		li	{
 			text-align: center;
+			&:first-child	{
+				padding-top: 5px;
+			}
+			&:last-child	{
+				padding-bottom: 5px;
+			}
+			&:hover	{
+				background-color: #262626;
+			}
 			a	{
-				padding: 10px 0;
+				padding: 20px 0;
 				color: #cccccc;
-				&:hover	{
-					background-color: #262626;
-				}
 			}
 		}
 	}
 }
 
-%naviconbars	{
+%navicon-bar	{
 	display: block;
 	content: '';
 	background-color: $primary-color;
@@ -99,6 +119,11 @@ header	{
 	top:5px;
 	height: 1px;
 	width: 15px
+}
+%transition-menu	{
+		@include transition-property(all);
+		@include transition-duration(.2s);
+		@include transition-timing-function(ease-out);
 }
 .menu-icon	{
 	cursor: pointer;
@@ -112,20 +137,49 @@ header	{
 		height: 1px;
 		width: 15px;
 		position: relative;
+		@extend %transition-menu;
+		@include transition-property(background);
+
 		&:before	{
-			@extend %naviconbars;
+			@extend %navicon-bar;
+			@extend %transition-menu;
 			top: 7px;
 		}
 		&:after	{
-			@extend %naviconbars;
+			@extend %navicon-bar;
+			@extend %transition-menu;
 			top: -7px;
 		}
+		p	{
+			position: absolute;
+			left: 35px;
+			top: -25px;
+			color: $primary-color;
+		}
 	}
+}
+%inline-navicon-bar	{
+	top:0;
 }
 .menu-btn	{
 	display: none
 }
 
-.menu-icon:checked ~ .menu-wrapper ul	{
+.menu-btn:checked ~ ul	{
 	max-height: 500px;
+}
+
+.menu-btn:checked ~ .menu-icon .navicon {
+	background: transparent;
+}
+ 
+.menu-btn:checked ~ .menu-icon .navicon:before {
+	transform: rotate(-45deg);
+	@extend %inline-navicon-bar;
+
+}
+ 
+.menu-btn:checked ~ .menu-icon .navicon:after {
+	transform: rotate(45deg);
+	@extend %inline-navicon-bar;
 }
