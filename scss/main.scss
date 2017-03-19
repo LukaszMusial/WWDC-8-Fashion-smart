@@ -5,7 +5,8 @@
 $logo-social-layout: horizontal;
 @import 'logo-social/*.png';
 @import 'brands/*.png';
-// @import 'projects/*.jpg';
+
+@import 'media';
 
 @include all-logo-social-sprites;
 
@@ -24,7 +25,10 @@ $secondary-color: invert($primary-color);
 // ------------------ sass ---------------------
 
 header	{
-	height: 80px;
+	height: 60px;
+	@include breakpoint(480px)	{
+		height: 80px;
+	}
 	display: flex;
 	flex-direction: row;
 	box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
@@ -48,16 +52,20 @@ header	{
 	justify-content: space-between;
 	align-items: center;
 	ul	{
-		margin-right: 30px;
-		li	{
-			display: inline;
-			a	{
-				display: inline-block;
-				height: 37px;
-				width: 36px;
-				text-indent: -9999px;
-			}
-		}		
+		display: none;
+		@include breakpoint(720px)	{
+			display: block;
+			margin-right: 30px;
+			li	{
+				display: inline;
+				a	{
+					display: inline-block;
+					height: 37px;
+					width: 36px;
+					text-indent: -9999px;
+				}
+			}	
+		}	
 	}
 }
 
@@ -71,20 +79,33 @@ header	{
 
 // ------------------ menu ---------------------
 .menu	{
+	background-color: $primary-color;
 	display: flex;
-	flex-direction: column;
-	background-color: $secondary-color;
+	@include breakpoint(480px)	{
+		flex-direction: column;
+		background-color: $secondary-color;
+	}
+
 	width: 28%;
 	height: 100%;
 
 }
 .menu-wrapper	{
-	padding-top: 5px;
+	@include breakpoint(480px)	{
+		display: block;
+		padding-top: 5px;
+		align-items: center;
+
+	}
 	width: 100%;
 	ul	{
+		clear: both;
+		@include breakpoint(480px)	{
+			background-color: $secondary-color;
+		}
 		margin: 0;
 		padding: 0;
-		background-color: #000000;
+		background-color: $primary-color;
 		list-style: none;
 		overflow: hidden;
 		max-height: 0;
@@ -94,27 +115,52 @@ header	{
 		// transition: max-height .2s ease-out;
 		li	{
 			text-align: center;
+			// background-color: $primary-color;
+			@include breakpoint(480px)	{
+				// background-color: $secondary-color;
+				color: $primary-color;
+			}
 			&:first-child	{
 				padding-top: 5px;
 			}
 			&:last-child	{
 				padding-bottom: 5px;
 			}
-			&:hover	{
-				background-color: #262626;
-			}
+			// &:hover	{
+			// 	background-color: $primary-color;
+			// 	@include breakpoint(480px)	{
+			// 		background-color: #262626;
+			// 		color: $primary-color;
+			// 	}
+			// }
 			a	{
 				padding: 20px 0;
-				color: #cccccc;
+				color: $secondary-color;
+				@include breakpoint(480px)	{
+					color: $primary-color;
+				}
+				&:hover	{
+					color: $primary-color;
+					background-color: $secondary-color;
+					@include breakpoint(480px)	{
+						color: $primary-color;
+						background-color: #262626;
+					}
+					
+				}
 			}
 		}
 	}
 }
 
 %navicon-bar	{
+	background-color: $secondary-color;
+	@include breakpoint(480px)	{
+	background-color: $primary-color;
+	}
 	display: block;
 	content: '';
-	background-color: $primary-color;
+
 	position: absolute;
 	top:5px;
 	height: 1px;
@@ -126,14 +172,21 @@ header	{
 		@include transition-timing-function(ease-out);
 }
 .menu-icon	{
+	float: right;
+	@include breakpoint(480px)	{
+		float: none;
+	}
 	cursor: pointer;
 	display: inline-block;
 	padding: 33px 30px;
 	position: relative;
 	@include user-select(none);
 	.navicon	{
+		background-color: $secondary-color;
+		@include breakpoint(480px)	{
+			background-color: $primary-color;
+		}
 		display: block;
-		background-color: $primary-color;
 		height: 1px;
 		width: 15px;
 		position: relative;
@@ -151,10 +204,15 @@ header	{
 			top: -7px;
 		}
 		p	{
-			position: absolute;
-			left: 35px;
-			top: -25px;
-			color: $primary-color;
+			clear: both;
+			display: none;
+			@include breakpoint(480px)	{
+				display: inline;
+				position: absolute;
+				left: 35px;
+				top: -25px;
+				color: $primary-color;
+			}
 		}
 	}
 }
