@@ -28,7 +28,12 @@
   background-position: -211px 0;
 }
 
-header {
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
   height: 60px;
   display: flex;
   flex-direction: row;
@@ -37,18 +42,18 @@ header {
   width: 100%;
 }
 @media (min-width: 480px) {
-  header {
+  nav {
     height: 80px;
   }
 }
-header ul {
+nav ul {
   list-style: none;
   -moz-user-select: -moz-none;
   -ms-user-select: none;
   -webkit-user-select: none;
   user-select: none;
 }
-header ul li a {
+nav ul li a {
   display: block;
   text-decoration: none;
 }
@@ -271,4 +276,36 @@ header ul li a {
 
 .menu-btn:checked ~ .menu-icon .navicon:after {
   transform: rotate(45deg);
+}
+
+.question:before, .question:after {
+  content: '';
+  position: absolute;
+  width: 500px;
+  border-bottom: 1px white solid;
+}
+
+.home {
+  padding: 60px;
+  background: url("../img/img_1.jpg") center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+}
+@media (min-width: 480px) {
+  .home {
+    padding: 80px;
+  }
+}
+.home .home-wrapper {
+  color: #ffffff;
+  margin: auto;
+  text-align: center;
+}
+.home .home-wrapper h2 {
+  margin: 0;
+}
+
+.question {
+  position: relative;
 }

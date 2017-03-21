@@ -17,6 +17,8 @@ $gutters: 1/3;
 
 $primary-color: #ffffff;
 $secondary-color: invert($primary-color);
+// $basic-font: ;
+// $bold-font: ;
 
 // ------------------ mixins ---------------------
 
@@ -24,7 +26,14 @@ $secondary-color: invert($primary-color);
 
 // ------------------ sass ---------------------
 
-header	{
+
+// ------------------ nav ---------------------
+body	{
+	margin: 0;
+	padding: 0;
+}
+
+nav	{
 	height: 60px;
 	@include breakpoint(480px)	{
 		height: 80px;
@@ -240,4 +249,44 @@ header	{
 .menu-btn:checked ~ .menu-icon .navicon:after {
 	transform: rotate(45deg);
 	@extend %inline-navicon-bar;
+}
+
+// ------------------ jumbotron ---------------------
+
+%middle-height-line	{
+	content:'';
+	position: absolute;
+	width:500px;
+	border-bottom: 1px white solid;
+}
+
+.home	{
+	padding: 60px;
+	background: url('../img/img_1.jpg') center  no-repeat;
+	background-size: cover;
+	height: 100vh;
+	display: flex;
+	@include breakpoint(480px)	{
+		padding: 80px;
+	}
+	.home-wrapper	{
+		// display: flex;
+		color: $primary-color;
+		margin: auto;
+		text-align: center;
+		h2	{
+			margin: 0;
+		}
+	}
+}
+.question	{
+	position: relative;
+	&:before	{
+		@extend %middle-height-line;
+
+	}
+	&:after	{
+		@extend %middle-height-line;
+
+	}
 }
