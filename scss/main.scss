@@ -256,8 +256,11 @@ nav	{
 %middle-height-line	{
 	content:'';
 	position: absolute;
-	width:500px;
+	width: 500px;
 	border-bottom: 1px white solid;
+	// top: 5px;
+	// height: 50%;
+
 }
 
 .home	{
@@ -270,23 +273,33 @@ nav	{
 		padding: 80px;
 	}
 	.home-wrapper	{
-		// display: flex;
+		overflow: hidden;
 		color: $primary-color;
 		margin: auto;
 		text-align: center;
-		h2	{
-			margin: 0;
+		h1	{
+			font-size: 64px;
 		}
 	}
 }
 .question	{
-	position: relative;
-	&:before	{
-		@extend %middle-height-line;
+	// height: 100%;
 
-	}
-	&:after	{
-		@extend %middle-height-line;
+	span	{
+		display: inline-block;
+		line-height: 0.2;
+		position: relative;
+		font-size: 24px;
+		&:before	{
+			@extend %middle-height-line;
+			right: 100%;
+			margin-right: 10px;
 
+		}
+		&:after	{
+			@extend %middle-height-line;
+			left: 100%;
+			margin-left: 10px;
+		}
 	}
 }

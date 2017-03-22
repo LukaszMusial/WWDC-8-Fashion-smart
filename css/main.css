@@ -278,7 +278,7 @@ nav ul li a {
   transform: rotate(45deg);
 }
 
-.question:before, .question:after {
+.question span:before, .question span:after {
   content: '';
   position: absolute;
   width: 500px;
@@ -298,14 +298,26 @@ nav ul li a {
   }
 }
 .home .home-wrapper {
+  overflow: hidden;
   color: #ffffff;
   margin: auto;
   text-align: center;
 }
-.home .home-wrapper h2 {
-  margin: 0;
+.home .home-wrapper h1 {
+  font-size: 64px;
 }
 
-.question {
+.question span {
+  display: inline-block;
+  line-height: 0.2;
   position: relative;
+  font-size: 24px;
+}
+.question span:before {
+  right: 100%;
+  margin-right: 10px;
+}
+.question span:after {
+  left: 100%;
+  margin-left: 10px;
 }
