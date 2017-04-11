@@ -286,7 +286,7 @@ nav ul li a {
 }
 
 .home {
-  padding: 60px;
+  padding-top: 60px;
   background: url("../img/img_1.jpg") center no-repeat;
   background-size: cover;
   height: 100vh;
@@ -320,4 +320,12 @@ nav ul li a {
 .question span:after {
   left: 100%;
   margin-left: 10px;
+}
+
+.check-us {
+  background-color: white;
+  height: 450px;
+}
+.check-us .check-us-crprogress-bar {
+  padding: 20px 40px;
 }
