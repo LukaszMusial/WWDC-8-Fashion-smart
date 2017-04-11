@@ -309,8 +309,13 @@ nav	{
 	height: 450px;
 	.check-us-crprogress-bar	{
 		padding: 20px 40px;
-		.circlebar	{
-
+		svg	{
+			circle	{
+				&:nth-child(2)	{
+					
+				}
+			}
+			
 		}
 	}
 }
