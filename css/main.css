@@ -322,10 +322,30 @@ nav ul li a {
   margin-left: 10px;
 }
 
+@keyframes start {
+  0% {
+    stroke-dashoffset: 691;
+  }
+}
 .check-us {
   background-color: white;
   height: 450px;
+  display: flex;
 }
 .check-us .check-us-crprogress-bar {
-  padding: 20px 40px;
+  margin: 40px 60px;
+  position: relative;
+}
+.check-us .check-us-crprogress-bar svg:nth-child(2) {
+  position: absolute;
+  top: -4px;
+  left: -2px;
+  transform: rotate(-90deg);
+}
+.check-us .check-us-crprogress-bar svg:nth-child(2) circle {
+  fill: none;
+  stroke-width: 4;
+  stroke-dasharray: 691;
+  animation: start 10s;
+  opacity: 0.9;
 }
