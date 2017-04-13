@@ -58,6 +58,11 @@ nav ul li a {
   text-decoration: none;
 }
 
+.wrapper {
+  margin: 0 auto;
+  max-width: 1180px;
+}
+
 .logo-social-wrapper {
   background-color: #ffffff;
   width: 72%;
@@ -327,25 +332,48 @@ nav ul li a {
     stroke-dashoffset: 691;
   }
 }
-.check-us {
-  background-color: white;
+.check-us-wrapper {
   height: 450px;
-  display: flex;
 }
-.check-us .check-us-crprogress-bar {
-  margin: 40px 60px;
+
+.check-us-crprogress-bar {
+  margin-top: 40px;
   position: relative;
 }
-.check-us .check-us-crprogress-bar svg:nth-child(2) {
+.check-us-crprogress-bar svg:nth-child(2) {
   position: absolute;
   top: -4px;
   left: -2px;
   transform: rotate(-90deg);
 }
-.check-us .check-us-crprogress-bar svg:nth-child(2) circle {
+.check-us-crprogress-bar svg:nth-child(2) circle {
   fill: none;
   stroke-width: 4;
   stroke-dasharray: 691;
   animation: start 10s;
   opacity: 0.9;
+}
+
+.first {
+  width: 18.64407%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 6.77966%;
+  clear: none;
+}
+
+.second {
+  width: 18.64407%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 40.67797%;
+  clear: none;
+}
+
+.third {
+  width: 18.64407%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 74.57627%;
+  clear: none;
 }
