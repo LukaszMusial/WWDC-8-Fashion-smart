@@ -76,6 +76,7 @@ nav {
   }
 }
 nav ul {
+  padding-top: 0;
   list-style: none;
   -moz-user-select: -moz-none;
   -ms-user-select: none;
@@ -94,11 +95,16 @@ nav ul li a {
 
 .logo-social-wrapper {
   background-color: #ffffff;
-  width: 72%;
+  width: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+@media (min-width: 480px) {
+  .logo-social-wrapper {
+    width: 72%;
+  }
 }
 .logo-social-wrapper ul {
   display: none;
@@ -120,18 +126,31 @@ nav ul li a {
 }
 
 .logo-social-logo {
-  margin-left: 18%;
+  position: absolute;
   height: 45px;
   width: 100px;
+  left: 35px;
   text-indent: -9999px;
-  cursor: pointer;
+}
+@media (min-width: 480px) {
+  .logo-social-logo {
+    position: relative;
+    margin-left: 18%;
+    text-indent: -9999px;
+    cursor: pointer;
+  }
 }
 
 .menu {
   background-color: #ffffff;
   display: flex;
-  width: 28%;
+  width: 100%;
   height: 100%;
+}
+@media (min-width: 480px) {
+  .menu {
+    width: 28%;
+  }
 }
 @media (min-width: 480px) {
   .menu {
@@ -241,7 +260,6 @@ nav ul li a {
   cursor: pointer;
   display: inline-block;
   padding: 33px 30px;
-  position: relative;
   -moz-user-select: -moz-none;
   -ms-user-select: none;
   -webkit-user-select: none;
@@ -250,6 +268,7 @@ nav ul li a {
 @media (min-width: 480px) {
   .menu-icon {
     float: none;
+    padding-bottom: 26px;
   }
 }
 .menu-icon .navicon {
@@ -329,11 +348,6 @@ nav ul li a {
   flex-direction: column;
   justify-content: space-between;
 }
-@media (min-width: 480px) {
-  .home {
-    padding: 80px;
-  }
-}
 .home .home-wrapper {
   align-self: flex-start;
   overflow: hidden;
@@ -345,9 +359,14 @@ nav ul li a {
 }
 .home .home-wrapper h1 {
   margin-top: 0;
-  font-size: 74px;
+  font-size: 52px;
   text-transform: uppercase;
   font-weight: 500;
+}
+@media (min-width: 750px) {
+  .home .home-wrapper h1 {
+    font-size: 74px;
+  }
 }
 .home .home-wrapper p:last-child {
   padding-top: 25px;
@@ -389,74 +408,65 @@ nav ul li a {
   }
 }
 .check-us-wrapper {
-  height: 450px;
+  position: relative;
 }
 
 .crprogress-bar-first {
-  width: 18.64407%;
-  float: left;
-  margin-right: -100%;
-  margin-left: 6.77966%;
-  clear: none;
+  display: block;
 }
 .crprogress-bar-first h3 {
   color: #f04939;
 }
 
 .crprogress-bar-second {
-  width: 18.64407%;
-  float: left;
-  margin-right: -100%;
-  margin-left: 40.67797%;
-  clear: none;
+  display: block;
 }
 .crprogress-bar-second h3 {
   color: #02998a;
 }
 
 .crprogress-bar-third {
-  width: 18.64407%;
-  float: left;
-  margin-right: -100%;
-  margin-left: 74.57627%;
-  clear: none;
+  display: block;
 }
 .crprogress-bar-third h3 {
   color: #152c3c;
 }
 
-.check-us-crprogress-bar-wrapper {
+.check-us-crprogress-bar {
+  background-color: blue;
+  width: 100%;
+  max-width: 300px;
   margin-top: 40px;
   position: relative;
 }
-.check-us-crprogress-bar-wrapper svg:nth-child(2) {
+.check-us-crprogress-bar svg:nth-child(2) {
   position: absolute;
   top: 2px;
   left: -2px;
   transform: rotate(60deg);
 }
-.check-us-crprogress-bar-wrapper svg:nth-child(2) circle {
+.check-us-crprogress-bar svg:nth-child(2) circle {
   fill: none;
   stroke-width: 4;
   stroke-dasharray: 691;
   animation: start 10s;
   opacity: 0.9;
 }
-.check-us-crprogress-bar-wrapper h3 {
+.check-us-crprogress-bar h3 {
   width: 100%;
   position: absolute;
   text-align: center;
   top: -6%;
   font-size: 75px;
 }
-.check-us-crprogress-bar-wrapper h3 span {
+.check-us-crprogress-bar h3 span {
   font-weight: 300;
   font-size: 18px;
   color: black;
   display: block;
   text-transform: uppercase;
 }
-.check-us-crprogress-bar-wrapper p {
+.check-us-crprogress-bar p {
   text-align: center;
   color: black;
 }

@@ -3,3 +3,8 @@ https://www.dropbox.com/sh/k9r9op01foo8hbk/AACVT41lV-k47X91KFE250kRa?dl=0
 circle progress bar:
 
 http://codepen.io/saadeghi/pen/IBhfJ
+
+JS po html i css:
+Menu po klikiniêciu poza menu siê chowa,
+menu mobile po rozsuniêciu przesuwa diva jumbotron,
+animacja w divie odpala siê po scrollu na tego diva

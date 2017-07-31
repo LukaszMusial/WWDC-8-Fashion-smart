@@ -72,6 +72,7 @@ body	{
 		font-size: 50px;
 		text-transform: uppercase;
 		margin-top: 0;
+		
 		}
 	}
 }
@@ -91,6 +92,7 @@ nav	{
 	z-index: 10;
 	width: 100%;
 	ul	{
+		padding-top: 0;
 		list-style: none;
 		@include user-select(none);
 		li a	{
@@ -106,11 +108,14 @@ nav	{
 }
 .logo-social-wrapper	{
 	background-color: $primary-color;
-	width: 72%;
+	width: 0;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+	@include breakpoint(480px)	{
+		width: 72%;
+	}
 	ul	{
 		display: none;
 		@include breakpoint(720px)	{
@@ -130,15 +135,26 @@ nav	{
 }
 
 .logo-social-logo	{
-	margin-left: 18%;
+	position: absolute;
 	height: 45px;
 	width: 100px;
+	left: 35px;
 	text-indent: -9999px;
-	cursor: pointer;
+	@include breakpoint(480px)	{
+		position: relative;
+		margin-left: 18%;
+		text-indent: -9999px;
+		cursor: pointer;
+	}
+
 }
 
 // ------------------ menu ---------------------
 .menu	{
+	@include breakpoint(480px)	{
+		width: 28%;
+
+	}
 	background-color: $primary-color;
 	display: flex;
 	@include breakpoint(480px)	{
@@ -146,7 +162,7 @@ nav	{
 		background-color: $secondary-color;
 	}
 
-	width: 28%;
+	width: 100%;
 	height: 100%;
 
 }
@@ -162,6 +178,7 @@ nav	{
 		clear: both;
 		@include breakpoint(480px)	{
 			background-color: $secondary-color;
+
 		}
 		margin: 0;
 		padding: 0;
@@ -234,11 +251,12 @@ nav	{
 	float: right;
 	@include breakpoint(480px)	{
 		float: none;
+		padding-bottom: 26px;
 	}
 	cursor: pointer;
 	display: inline-block;
 	padding: 33px 30px;
-	position: relative;
+	// position: relative;
 	@include user-select(none);
 	.navicon	{
 		background-color: $secondary-color;
@@ -322,7 +340,7 @@ nav	{
 	flex-direction: column;
 	justify-content: space-between;
 	@include breakpoint(480px)	{
-		padding: 80px;
+		// padding: 80px;
 	}
 	.home-wrapper	{
 
@@ -335,9 +353,13 @@ nav	{
 		text-align: center;
 		h1	{
 			margin-top: 0;
-			font-size: 74px;
+			font-size: 52px;
 			text-transform: uppercase;
 			font-weight: 500;
+			@include breakpoint(750px)	{
+			font-size: 74px;
+
+			}
 		}
 		p:last-child	{
 			padding-top: 25px;
@@ -393,34 +415,51 @@ nav	{
 
 .check-us-wrapper	{
 	// background-color: white;
-	height: 450px;
+	// height: 450px;
+	position: relative;
 	// display: flex;
 
 }
 
 .crprogress-bar-first	{
-	
-	@include grid-span(3,2);
-	h3	{
-		color: #f04939;
-	}
+	display:block;
+			h3	{
+			color: #f04939;
+		}	
+	// @include breakpoint(1100px)	{
+	// 	@include grid-span(3,2);
+
+	// }
 }
 .crprogress-bar-second	{
-	
-	@include grid-span(3,7);
-	h3	{
-		color: #02998a;
-	}
+	display:block;
+			h3	{
+			color: #02998a;
+		}
+	// @include breakpoint(1100px)	{
+	// 	@include grid-span(3,7);
+
+	// }
 }
 .crprogress-bar-third	{
-	
-	@include grid-span(3,12);
-	h3	{
-		color: #152c3c;
-	}
-}
+	display:block;
+			h3	{
+			color: #152c3c;
+		}
+	// @include breakpoint(1100px)	{
+	// 	@include grid-span(3,12);
 
+	// }
+}
 .check-us-crprogress-bar-wrapper	{
+// height: 400px;
+// background-color: red;
+// position: relative;
+}
+.check-us-crprogress-bar	{
+	background-color: blue;
+	width: 100%;
+	max-width: 300px;
 	margin-top: 40px;
 	position: relative;
 	svg	{
