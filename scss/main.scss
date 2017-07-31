@@ -249,13 +249,14 @@ nav	{
 }
 .menu-icon	{
 	float: right;
+	padding: 33px 30px 26px 30px;
 	@include breakpoint(480px)	{
 		float: none;
-		padding-bottom: 26px;
+		padding-bottom: 33px;
 	}
 	cursor: pointer;
 	display: inline-block;
-	padding: 33px 30px;
+	
 	// position: relative;
 	@include user-select(none);
 	.navicon	{
@@ -333,9 +334,10 @@ nav	{
 
 .home	{
 	padding-top: 60px;
+	// padding-bottom: 300px;
 	background: url('../img/img_1.jpg') center  no-repeat;
 	background-size: cover;
-	height: 85vh;
+	height: 95vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -375,6 +377,7 @@ nav	{
 	}
 	.arrows-wraper	{
 			margin: 0 auto;
+			margin-bottom: 60px;
 		}
 }
 
@@ -417,6 +420,10 @@ nav	{
 	// background-color: white;
 	// height: 450px;
 	position: relative;
+	@include breakpoint(750px)	{
+		height: 450px;
+
+	}
 	// display: flex;
 
 }
@@ -426,30 +433,42 @@ nav	{
 			h3	{
 			color: #f04939;
 		}	
-	// @include breakpoint(1100px)	{
-	// 	@include grid-span(3,2);
+	@include breakpoint(750px)	{
+		@include grid-span(5,1);
 
-	// }
+	}
+	@include breakpoint(1100px)	{
+		@include grid-span(3,2);
+
+	}
 }
 .crprogress-bar-second	{
 	display:block;
 			h3	{
 			color: #02998a;
 		}
-	// @include breakpoint(1100px)	{
-	// 	@include grid-span(3,7);
+	@include breakpoint(750px)	{
+		@include grid-span(5,7);
 
-	// }
+	}
+	@include breakpoint(1100px)	{
+		@include grid-span(3,7);
+
+	}
 }
 .crprogress-bar-third	{
 	display:block;
 			h3	{
 			color: #152c3c;
 		}
-	// @include breakpoint(1100px)	{
-	// 	@include grid-span(3,12);
+	@include breakpoint(750px)	{
+		@include grid-span(5,11);
 
-	// }
+	}
+	@include breakpoint(1100px)	{
+		@include grid-span(3,12);
+
+	}
 }
 .check-us-crprogress-bar-wrapper	{
 // height: 400px;
@@ -458,8 +477,8 @@ nav	{
 }
 .check-us-crprogress-bar	{
 	background-color: blue;
-	width: 100%;
-	max-width: 300px;
+	// width: 100%;
+	width: 225px;
 	margin-top: 40px;
 	position: relative;
 	svg	{

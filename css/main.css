@@ -257,9 +257,9 @@ nav ul li a {
 
 .menu-icon {
   float: right;
+  padding: 33px 30px 26px 30px;
   cursor: pointer;
   display: inline-block;
-  padding: 33px 30px;
   -moz-user-select: -moz-none;
   -ms-user-select: none;
   -webkit-user-select: none;
@@ -268,7 +268,7 @@ nav ul li a {
 @media (min-width: 480px) {
   .menu-icon {
     float: none;
-    padding-bottom: 26px;
+    padding-bottom: 33px;
   }
 }
 .menu-icon .navicon {
@@ -343,7 +343,7 @@ nav ul li a {
   padding-top: 60px;
   background: url("../img/img_1.jpg") center no-repeat;
   background-size: cover;
-  height: 85vh;
+  height: 95vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -380,6 +380,7 @@ nav ul li a {
 }
 .home .arrows-wraper {
   margin: 0 auto;
+  margin-bottom: 60px;
 }
 
 .smaller-text {
@@ -410,12 +411,35 @@ nav ul li a {
 .check-us-wrapper {
   position: relative;
 }
+@media (min-width: 750px) {
+  .check-us-wrapper {
+    height: 450px;
+  }
+}
 
 .crprogress-bar-first {
   display: block;
 }
 .crprogress-bar-first h3 {
   color: #f04939;
+}
+@media (min-width: 750px) {
+  .crprogress-bar-first {
+    width: 32.20339%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+  }
+}
+@media (min-width: 1100px) {
+  .crprogress-bar-first {
+    width: 18.64407%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 6.77966%;
+    clear: none;
+  }
 }
 
 .crprogress-bar-second {
@@ -424,6 +448,24 @@ nav ul li a {
 .crprogress-bar-second h3 {
   color: #02998a;
 }
+@media (min-width: 750px) {
+  .crprogress-bar-second {
+    width: 32.20339%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 40.67797%;
+    clear: none;
+  }
+}
+@media (min-width: 1100px) {
+  .crprogress-bar-second {
+    width: 18.64407%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 40.67797%;
+    clear: none;
+  }
+}
 
 .crprogress-bar-third {
   display: block;
@@ -431,11 +473,28 @@ nav ul li a {
 .crprogress-bar-third h3 {
   color: #152c3c;
 }
+@media (min-width: 750px) {
+  .crprogress-bar-third {
+    width: 32.20339%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+}
+@media (min-width: 1100px) {
+  .crprogress-bar-third {
+    width: 18.64407%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 74.57627%;
+    clear: none;
+  }
+}
 
 .check-us-crprogress-bar {
   background-color: blue;
-  width: 100%;
-  max-width: 300px;
+  width: 225px;
   margin-top: 40px;
   position: relative;
 }
