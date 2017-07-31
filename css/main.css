@@ -31,6 +31,34 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: "Quicksand", sans-serif;
+  color: #ffffff;
+}
+
+.sections-wrapper {
+  max-width: 1080px;
+  height: 200px;
+  width: 100%;
+  border: 2px solid white;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sections-wrapper .sections-wrapper-hiddenBox {
+  overflow: hidden;
+  display: inline-block;
+  line-height: 110%;
+}
+.sections-wrapper .sections-wrapper-hiddenBox p span {
+  font-size: 18px;
+}
+.sections-wrapper .sections-wrapper-hiddenBox h2 {
+  color: #ffffff;
+  font-size: 50px;
+  text-transform: uppercase;
+  margin-top: 0;
 }
 
 nav {
@@ -39,6 +67,7 @@ nav {
   flex-direction: row;
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
   position: fixed;
+  z-index: 10;
   width: 100%;
 }
 @media (min-width: 480px) {
@@ -133,10 +162,10 @@ nav ul li a {
   -o-transition-property: max-height;
   -webkit-transition-property: max-height;
   transition-property: max-height;
-  -moz-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  -webkit-transition-duration: 1s;
-  transition-duration: 1s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
 @media (min-width: 480px) {
   .menu-wrapper ul {
@@ -283,19 +312,22 @@ nav ul li a {
   transform: rotate(45deg);
 }
 
-.question span:before, .question span:after {
+.smaller-text span:before, .smaller-text span:after {
   content: '';
   position: absolute;
   width: 500px;
   border-bottom: 1px white solid;
+  height: 50%;
 }
 
 .home {
   padding-top: 60px;
   background: url("../img/img_1.jpg") center no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 85vh;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 @media (min-width: 480px) {
   .home {
@@ -303,26 +335,50 @@ nav ul li a {
   }
 }
 .home .home-wrapper {
+  align-self: flex-start;
   overflow: hidden;
-  color: #ffffff;
-  margin: auto;
+  line-height: 250%;
+  margin-top: 15%;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
 .home .home-wrapper h1 {
-  font-size: 64px;
+  margin-top: 0;
+  font-size: 74px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.home .home-wrapper p:last-child {
+  padding-top: 25px;
+}
+.home .home-wrapper .btn {
+  border: 2px white solid;
+  border-radius: 25px;
+  padding: 12px 55px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.home .arrows-wraper {
+  margin: 0 auto;
 }
 
-.question span {
+.smaller-text {
+  margin-bottom: 0;
+}
+.smaller-text span {
   display: inline-block;
   line-height: 0.2;
   position: relative;
-  font-size: 24px;
+  font-size: 32px;
+  font-family: "Dosis", sans-serif;
+  font-weight: 300;
 }
-.question span:before {
+.smaller-text span:before {
   right: 100%;
   margin-right: 10px;
 }
-.question span:after {
+.smaller-text span:after {
   left: 100%;
   margin-left: 10px;
 }
@@ -336,44 +392,78 @@ nav ul li a {
   height: 450px;
 }
 
-.check-us-crprogress-bar {
-  margin-top: 40px;
-  position: relative;
-}
-.check-us-crprogress-bar svg:nth-child(2) {
-  position: absolute;
-  top: -4px;
-  left: -2px;
-  transform: rotate(-90deg);
-}
-.check-us-crprogress-bar svg:nth-child(2) circle {
-  fill: none;
-  stroke-width: 4;
-  stroke-dasharray: 691;
-  animation: start 10s;
-  opacity: 0.9;
-}
-
-.first {
+.crprogress-bar-first {
   width: 18.64407%;
   float: left;
   margin-right: -100%;
   margin-left: 6.77966%;
   clear: none;
 }
+.crprogress-bar-first h3 {
+  color: #f04939;
+}
 
-.second {
+.crprogress-bar-second {
   width: 18.64407%;
   float: left;
   margin-right: -100%;
   margin-left: 40.67797%;
   clear: none;
 }
+.crprogress-bar-second h3 {
+  color: #02998a;
+}
 
-.third {
+.crprogress-bar-third {
   width: 18.64407%;
   float: left;
   margin-right: -100%;
   margin-left: 74.57627%;
   clear: none;
+}
+.crprogress-bar-third h3 {
+  color: #152c3c;
+}
+
+.check-us-crprogress-bar-wrapper {
+  margin-top: 40px;
+  position: relative;
+}
+.check-us-crprogress-bar-wrapper svg:nth-child(2) {
+  position: absolute;
+  top: 2px;
+  left: -2px;
+  transform: rotate(60deg);
+}
+.check-us-crprogress-bar-wrapper svg:nth-child(2) circle {
+  fill: none;
+  stroke-width: 4;
+  stroke-dasharray: 691;
+  animation: start 10s;
+  opacity: 0.9;
+}
+.check-us-crprogress-bar-wrapper h3 {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  top: -6%;
+  font-size: 75px;
+}
+.check-us-crprogress-bar-wrapper h3 span {
+  font-weight: 300;
+  font-size: 18px;
+  color: black;
+  display: block;
+  text-transform: uppercase;
+}
+.check-us-crprogress-bar-wrapper p {
+  text-align: center;
+  color: black;
+}
+
+.our-team {
+  padding-top: 50px;
+  height: 300px;
+  background: url("../img/img_2.jpg") center no-repeat;
+  background-size: cover;
 }
