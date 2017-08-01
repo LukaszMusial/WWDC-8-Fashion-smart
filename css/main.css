@@ -35,13 +35,18 @@ body {
   color: #ffffff;
 }
 
+.wrapper {
+  margin: 0 auto;
+  max-width: 1180px;
+}
+
 .sections-wrapper {
+  margin-left: 20px;
+  margin-right: 20px;
   max-width: 1080px;
   height: 200px;
-  width: 100%;
   border: 2px solid white;
   text-align: center;
-  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,11 +91,6 @@ nav ul {
 nav ul li a {
   display: block;
   text-decoration: none;
-}
-
-.wrapper {
-  margin: 0 auto;
-  max-width: 1180px;
 }
 
 .logo-social-wrapper {
@@ -409,11 +409,23 @@ nav ul li a {
   }
 }
 .check-us-wrapper {
+  height: 450px;
   position: relative;
 }
-@media (min-width: 750px) {
+@media (max-width: 860px) {
+  .check-us-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: 860px) and (max-width: 1100px) {
   .check-us-wrapper {
     height: 450px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 45px;
   }
 }
 
@@ -422,15 +434,6 @@ nav ul li a {
 }
 .crprogress-bar-first h3 {
   color: #f04939;
-}
-@media (min-width: 750px) {
-  .crprogress-bar-first {
-    width: 32.20339%;
-    float: left;
-    margin-right: -100%;
-    margin-left: 0;
-    clear: none;
-  }
 }
 @media (min-width: 1100px) {
   .crprogress-bar-first {
@@ -448,15 +451,6 @@ nav ul li a {
 .crprogress-bar-second h3 {
   color: #02998a;
 }
-@media (min-width: 750px) {
-  .crprogress-bar-second {
-    width: 32.20339%;
-    float: left;
-    margin-right: -100%;
-    margin-left: 40.67797%;
-    clear: none;
-  }
-}
 @media (min-width: 1100px) {
   .crprogress-bar-second {
     width: 18.64407%;
@@ -473,15 +467,6 @@ nav ul li a {
 .crprogress-bar-third h3 {
   color: #152c3c;
 }
-@media (min-width: 750px) {
-  .crprogress-bar-third {
-    width: 32.20339%;
-    float: right;
-    margin-left: 0;
-    margin-right: 0;
-    clear: none;
-  }
-}
 @media (min-width: 1100px) {
   .crprogress-bar-third {
     width: 18.64407%;
@@ -493,7 +478,6 @@ nav ul li a {
 }
 
 .check-us-crprogress-bar {
-  background-color: blue;
   width: 225px;
   margin-top: 40px;
   position: relative;
