@@ -544,4 +544,45 @@ nav	{
 	background: url('../img/img_2.jpg') center  no-repeat;
 	background-size: cover;
 
-}	
+}
+
+// ---------------------------------- Team members -------------------------------------
+
+.team-members	{
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.team-member-wrapper	{
+	color: $secondary-color;
+	text-align: center;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	// justify-content: center;
+	// margin-left: 20px;
+	// margin-right: 20px;
+	@include breakpoint(860px)	{
+		flex-direction: row;
+
+	}
+	// max-width: 
+}
+.team-member-photo	{
+	width: 100%;
+	max-width: 590px;
+	height: 300px;
+	background: url('../img/team_01.jpg') center  no-repeat;
+	background-size: cover;
+}
+.team-member-description	{
+	// display: flex;
+	// align-items: center;
+	// justify-content: center;
+	
+	
+	background-color: blue;
+	width: 100%;
+	max-width: 590px;
+	height: 300px;
+}
