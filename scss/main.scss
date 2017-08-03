@@ -83,6 +83,12 @@ body	{
 		}
 	}
 }
+%sections-position	{
+	padding-top: 50px;
+	height: 300px;
+	background-size: cover;
+
+}
 
 // ------------------ nav ---------------------
 
@@ -539,11 +545,8 @@ nav	{
 // ---------------------------------- Our team section -------------------------------------
 
 .our-team	{
-	padding-top: 50px;
-	height: 300px;
 	background: url('../img/img_2.jpg') center  no-repeat;
-	background-size: cover;
-
+	@extend %sections-position
 }
 
 // ---------------------------------- Team members -------------------------------------
@@ -568,34 +571,73 @@ nav	{
 	}
 	// max-width: 
 }
-.team-member-photo	{
+%team-member-photo	{
+	box-sizing: border-box;
 	position: relative;
 	width: 100%;
 	max-width: 590px;
 	height: 260px;
-	background: url('../img/team_01.jpg') center  no-repeat;
 	background-size: cover;
 	padding: 20px 0px 20px 20px;
-
+	@include breakpoint(max-width 860px)	{
+		order: 2;
+		padding: 0px 20px 20px 20px;
+	}
 }
-.team-member-photo:after	{
+.team-member-photo1	{
+	@extend %team-member-photo;
+}
+.team-member-photo2	{
+	@extend %team-member-photo;
+}
+.team-member-photo1:after	{
 	position: absolute;
 	right: 0px;
-	top: 130px;
+	top: 100px;
 	content: '';
 	width: 0;
 	height: 0;
 	border-style: solid;
 	border-width: 32.5px 30px 32.5px 0;
 	border-color: transparent #ffffff transparent transparent;
+	@include breakpoint(max-width 860px)	{
+		-ms-transform: rotate(270deg);
+	    -webkit-transform: rotate(270deg);
+	    transform: rotate(270deg);
+	    top:-18px;
+	    right:47%;
+	}
+}
+.team-member-photo2:after	{
+	position: absolute;
+	left: 0px;
+	top: 100px;
+	content: '';
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 35px 0 35px 30px;
+	border-color: transparent transparent transparent #ffffff;
+	@include breakpoint(max-width 860px)	{
+		-ms-transform: rotate(90deg);
+	    -webkit-transform: rotate(90deg);
+	    transform: rotate(90deg);
+	    top:-20px;
+	    left:48%;
+	}
 }
 .team-member-photo-border-wraper	{
 	height: 100%;
 	border-top: 2px solid white;
 	border-bottom: 2px solid white;
 	border-left: 2px solid white;
+	@include breakpoint(max-width 860px)	{
+		border-top: none;
+		border-right: 2px solid white;
+	}
 }
 .team-member-description	{
+	box-sizing: border-box;
 	width: 100%;
 	max-width: 590px;
 	height: 260px;
@@ -604,6 +646,10 @@ nav	{
 	// padding-bottom: 20px;
 	// padding-right: 20px;
 	padding: 20px 20px 20px 0px;
+	@include breakpoint(max-width 860px)	{
+		order: 1;
+		padding: 20px 20px 0px 20px;
+	}
 
 }
 .team-member-description-border-wraper	{
@@ -615,6 +661,10 @@ nav	{
 	align-items: center;
 	justify-content: center;
 	height: 100%;
+	@include breakpoint(max-width 860px)	{
+		border-bottom: none;
+		border-left: 2px solid black;
+	}
 
 
 
@@ -628,4 +678,145 @@ nav	{
 		// margin: 0 175px;
 		// display: block;
 	}
+}
+
+.adrianna-bg	{
+	background: url('../img/team_01.jpg') center  no-repeat;
+
+}
+
+.olivia-bg	{
+	background: url('../img/team_02.jpg') center  no-repeat;
+	
+}
+
+.thomas-bg	{
+	background: url('../img/team_03.jpg') center  no-repeat;
+	
+}
+
+.taylor-bg	{
+	background: url('../img/team_04.jpg') center  no-repeat;
+	
+}
+
+.invert-description	{
+	order:1;
+	padding: 20px 0px 20px 20px;
+		@include breakpoint(max-width 860px)	{
+			padding: 20px 20px 0px 20px;
+
+	}
+}
+
+.invert-photo	{
+	order:2;
+	padding: 20px 20px 20px 0px;
+	@include breakpoint(max-width 860px)	{
+		padding: 0px 20px 20px 20px;
+
+	}
+}
+
+.invert-description-border	{
+	border-right: none;
+	border-left: 2px solid black;
+	@include breakpoint(max-width 860px)	{
+		border-bottom: none;
+		border-right: 2px solid black;
+	}
+}
+
+.invert-photo-border	{
+	border-left: none;
+	border-right: 2px solid white;
+	@include breakpoint(max-width 860px)	{
+		border-top: none;
+		// border-right: 2px solid white;
+		border-left: 2px solid white;;
+	}
+}
+
+// ---------------------------------- Portfolio section -------------------------------------
+
+.portfolio	{
+	background: url('../img/img_3.jpg') center  no-repeat;
+	@extend %sections-position;
+}
+
+// ---------------------------------- Portfolio projects section -------------------------------------
+
+.portfolio-projects	{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	.portfolio-projects-thumbnail	{
+		width: 235px;
+		height: 235px;
+	}
+}
+
+.project1	{
+	background: url('../img/projects/projects_02.jpg') center  no-repeat;
+}
+.project2	{
+	background: url('../img/projects/projects_03.jpg') center  no-repeat;
+}
+.project3	{
+	background: url('../img/projects/projects_04.jpg') center  no-repeat;
+}
+.project4	{
+	background: url('../img/projects/projects_05.jpg') center  no-repeat;
+}
+.project5	{
+	background: url('../img/projects/projects_06.jpg') center  no-repeat;
+}
+.project6	{
+	background: url('../img/projects/projects_07.jpg') center  no-repeat;
+}
+.project7	{
+	background: url('../img/projects/projects_08.jpg') center  no-repeat;
+}
+.project8	{
+	background: url('../img/projects/projects_09.jpg') center  no-repeat;
+}
+.project9	{
+	background: url('../img/projects/projects_10.jpg') center  no-repeat;
+}
+.project10	{
+	background: url('../img/projects/projects_11.jpg') center  no-repeat;
+}
+.project11	{
+	background: url('../img/projects/projects_12.jpg') center  no-repeat;
+}
+.project12	{
+	background: url('../img/projects/projects_13.jpg') center  no-repeat;
+}
+.project13	{
+	background: url('../img/projects/projects_14.jpg') center  no-repeat;
+}
+.project14	{
+	background: url('../img/projects/projects_15.jpg') center  no-repeat;
+}
+.project15	{
+	background: url('../img/projects/projects_16.jpg') center  no-repeat;
+}
+.project16	{
+	background: url('../img/projects/projects_17.jpg') center  no-repeat;
+}
+.project17	{
+	background: url('../img/projects/projects_18.jpg') center  no-repeat;
+}
+.project18	{
+	background: url('../img/projects/projects_19.jpg') center  no-repeat;
+}
+.project19	{
+	background: url('../img/projects/projects_20.jpg') center  no-repeat;
+}
+.project20	{
+	background: url('../img/projects/projects_21.jpg') center  no-repeat;
+}
+.project21	{
+	background: url('../img/projects/projects_22.jpg') center  no-repeat;
 }
