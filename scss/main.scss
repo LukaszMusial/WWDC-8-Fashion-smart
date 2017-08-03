@@ -51,10 +51,27 @@ body	{
 	margin: 0 auto;
 	max-width: 1180px;
 }
+.block	{
+	background-color: pink;
+}
+
+%sections-position	{
+	// padding-top: 50px;
+	height: 300px;
+	background-size: 100%;
+	display: flex;
+
+	justify-content: center;
+
+	align-items: center;
+
+}
 
 .sections-wrapper	{
-	margin-left: 20px;
-	margin-right: 20px;
+	// margin-left: 20px;
+	// margin-right: 20px;
+	min-width: 400px;
+
 	max-width: 1080px;
 	height: 200px;
 	border: 2px solid white;
@@ -83,12 +100,7 @@ body	{
 		}
 	}
 }
-%sections-position	{
-	padding-top: 50px;
-	height: 300px;
-	background-size: cover;
 
-}
 
 // ------------------ nav ---------------------
 
@@ -243,12 +255,12 @@ nav	{
 %navicon-bar	{
 	background-color: $secondary-color;
 	@include breakpoint(480px)	{
-	background-color: $primary-color;
+		background-color: $primary-color;
 	}
 	display: block;
 	content: '';
 	position: absolute;
-	top:5px;
+	top: 5px;
 	height: 1px;
 	width: 15px
 }
@@ -683,6 +695,7 @@ nav	{
 .adrianna-bg	{
 	background: url('../img/team_01.jpg') center  no-repeat;
 
+
 }
 
 .olivia-bg	{
@@ -747,13 +760,15 @@ nav	{
 // ---------------------------------- Portfolio projects section -------------------------------------
 
 .portfolio-projects	{
-	height: 100%;
+	height: 1000px;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	.portfolio-projects-thumbnail	{
 		width: 235px;
 		height: 235px;
+		background-size: cover;
 	}
 }
 
