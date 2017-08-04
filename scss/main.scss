@@ -54,25 +54,18 @@ body	{
 .block	{
 	background-color: pink;
 }
-
 %sections-position	{
-	// padding-top: 50px;
 	height: 300px;
-	background-size: 100%;
 	display: flex;
-
 	justify-content: center;
-
 	align-items: center;
-
 }
 
 .sections-wrapper	{
-	// margin-left: 20px;
-	// margin-right: 20px;
-	min-width: 400px;
-
+	margin-left: 20px;
+	margin-right: 20px;
 	max-width: 1080px;
+	width: 100%;
 	height: 200px;
 	border: 2px solid white;
 	text-align: center;
@@ -100,6 +93,59 @@ body	{
 		}
 	}
 }
+
+
+// %sections-position	{
+// 	// padding-top: 50px;
+// 	// display: block;
+// 	// width: 100vw;
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// 	height: 300px;
+// 	background-size: cover;
+// 	// width: auto;
+
+
+
+// }
+// .sections-wrapper	{
+// 	// padding-left:70%;
+// 	// margin-left: 20px;
+// 	// margin-right: 20px;
+// 	// min-width: 400px;
+// 	width: 100%;
+// 	max-width: 1080px;
+// 	height: 200px;
+// 	border: 2px solid white;
+// 	// text-align: center;
+// 	// margin: 0 auto;
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// 	background-color: red;
+// 	.sections-wrapper-hiddenBox	{
+// 		// height: 100%;
+// 		background-color: pink;
+// 		// max-width: 1080px;
+// 		overflow: hidden;
+// 		display: inline-block;
+// 		line-height: 110%;
+// 		p	{
+// 			// margin-top: 30px; 
+// 			span	{
+// 			font-size: 18px;
+// 			}
+// 		}
+// 		h2	{
+// 		color: $primary-color;
+// 		font-size: 50px;
+// 		text-transform: uppercase;
+// 		margin-top: 0;
+		
+// 		}
+// 	}
+// }
 
 
 // ------------------ nav ---------------------
@@ -356,7 +402,7 @@ nav	{
 
 .home	{
 	padding-top: 60px;
-	// padding-bottom: 300px;
+	padding-bottom: 300px;
 	background: url('../img/img_1.jpg') center  no-repeat;
 	background-size: cover;
 	height: 95vh;
@@ -557,8 +603,9 @@ nav	{
 // ---------------------------------- Our team section -------------------------------------
 
 .our-team	{
+	@extend %sections-position;
 	background: url('../img/img_2.jpg') center  no-repeat;
-	@extend %sections-position
+	background-size: cover;
 }
 
 // ---------------------------------- Team members -------------------------------------
@@ -753,23 +800,42 @@ nav	{
 // ---------------------------------- Portfolio section -------------------------------------
 
 .portfolio	{
-	background: url('../img/img_3.jpg') center  no-repeat;
 	@extend %sections-position;
+	background: url('../img/img_3.jpg') center  no-repeat;
+	background-size: cover;
+
 }
 
 // ---------------------------------- Portfolio projects section -------------------------------------
 
 .portfolio-projects	{
-	height: 1000px;
+	height: 100%;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	.portfolio-projects-thumbnail	{
-		width: 235px;
-		height: 235px;
-		background-size: cover;
+	.portfolio-projects-thumbnail-wrapper	{
+		min-width: 14.28%;
+		@include breakpoint(max-width 1100px)	{
+			min-width: 20%;
+
+		}
+		@include breakpoint(max-width 860px)	{
+			min-width: 25%;
+
+		}
+		@include breakpoint(max-width 480px)	{
+			min-width: 33.3333%;
+
+		}
+		.portfolio-projects-thumbnail	{
+			width: 100%;
+			height: 0;
+			padding-top: 92.857%; 
+			background-size: 100%;
+		}
 	}
+
 }
 
 .project1	{
@@ -831,7 +897,74 @@ nav	{
 }
 .project20	{
 	background: url('../img/projects/projects_21.jpg') center  no-repeat;
+		@include breakpoint(480px 860px)	{
+		display: none;
+	}
 }
 .project21	{
 	background: url('../img/projects/projects_22.jpg') center  no-repeat;
+	@include breakpoint(860px 1100px)	{
+		display: none;
+	}
+}
+
+
+// ---------------------------------- Brands section -------------------------------------
+
+
+.brands	{
+	@extend %sections-position;
+	background: url('../img/img_3.jpg') center  no-repeat;
+	background-size: cover;
+}
+// ---------------------------------- Brands-list section -------------------------------------
+
+
+.brands-lists	{
+	background: url('../img//brands/brands_S.png') center  no-repeat;  // pewnie zmiana na jpg jeśli sprite'y
+	height: 700px;
+	@include breakpoint(860px 1100px)	{
+		background: url('../img//brands/brands_M.png') center  no-repeat;
+	}
+	@include breakpoint(1100px)	{
+		background: url('../img//brands/brands_L.png') center  no-repeat;
+	}
+}
+
+// ---------------------------------- Footer -------------------------------------
+
+footer	{
+	background-color: #101010;
+	height: 315px;
+	.footer-row	{
+		height: 236px;
+		margin: 0 auto;
+		width: 100%;
+		max-width: 900px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		text-align: center;
+
+		p:first-child	{
+			font-size: 32px;
+			font-weight: 500px;
+			text-transform: uppercase;
+		}
+		hr	{
+			border: 0;
+			background-color: #009889;
+			width: 140px;
+			height: 2px;
+		}
+		p:last-child	{
+			font-size: 16px;
+			opacity: 0.3;
+		}
+	}
+	.footer-copyright	{
+		margin-top: 30px;
+		text-align: center;
+		opacity: 0.3;
+	}
 }

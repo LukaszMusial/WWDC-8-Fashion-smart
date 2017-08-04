@@ -44,17 +44,18 @@ body {
   background-color: pink;
 }
 
-.our-team, .portfolio {
+.our-team, .portfolio, .brands {
   height: 300px;
-  background-size: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .sections-wrapper {
-  min-width: 400px;
+  margin-left: 20px;
+  margin-right: 20px;
   max-width: 1080px;
+  width: 100%;
   height: 200px;
   border: 2px solid white;
   text-align: center;
@@ -352,6 +353,7 @@ nav ul li a {
 
 .home {
   padding-top: 60px;
+  padding-bottom: 300px;
   background: url("../img/img_1.jpg") center no-repeat;
   background-size: cover;
   height: 95vh;
@@ -527,6 +529,7 @@ nav ul li a {
 
 .our-team {
   background: url("../img/img_2.jpg") center no-repeat;
+  background-size: cover;
 }
 
 .team-members {
@@ -715,19 +718,39 @@ nav ul li a {
 
 .portfolio {
   background: url("../img/img_3.jpg") center no-repeat;
+  background-size: cover;
 }
 
 .portfolio-projects {
-  height: 1000px;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-.portfolio-projects .portfolio-projects-thumbnail {
-  width: 235px;
-  height: 235px;
-  background-size: cover;
+.portfolio-projects .portfolio-projects-thumbnail-wrapper {
+  min-width: 14.28%;
+}
+@media (max-width: 1100px) {
+  .portfolio-projects .portfolio-projects-thumbnail-wrapper {
+    min-width: 20%;
+  }
+}
+@media (max-width: 860px) {
+  .portfolio-projects .portfolio-projects-thumbnail-wrapper {
+    min-width: 25%;
+  }
+}
+@media (max-width: 480px) {
+  .portfolio-projects .portfolio-projects-thumbnail-wrapper {
+    min-width: 33.3333%;
+  }
+}
+.portfolio-projects .portfolio-projects-thumbnail-wrapper .portfolio-projects-thumbnail {
+  width: 100%;
+  height: 0;
+  padding-top: 92.857%;
+  background-size: 100%;
 }
 
 .project1 {
@@ -809,7 +832,72 @@ nav ul li a {
 .project20 {
   background: url("../img/projects/projects_21.jpg") center no-repeat;
 }
+@media (min-width: 480px) and (max-width: 860px) {
+  .project20 {
+    display: none;
+  }
+}
 
 .project21 {
   background: url("../img/projects/projects_22.jpg") center no-repeat;
+}
+@media (min-width: 860px) and (max-width: 1100px) {
+  .project21 {
+    display: none;
+  }
+}
+
+.brands {
+  background: url("../img/img_3.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.brands-lists {
+  background: url("../img//brands/brands_S.png") center no-repeat;
+  height: 700px;
+}
+@media (min-width: 860px) and (max-width: 1100px) {
+  .brands-lists {
+    background: url("../img//brands/brands_M.png") center no-repeat;
+  }
+}
+@media (min-width: 1100px) {
+  .brands-lists {
+    background: url("../img//brands/brands_L.png") center no-repeat;
+  }
+}
+
+footer {
+  background-color: #101010;
+  height: 315px;
+}
+footer .footer-row {
+  height: 236px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+footer .footer-row p:first-child {
+  font-size: 32px;
+  font-weight: 500px;
+  text-transform: uppercase;
+}
+footer .footer-row hr {
+  border: 0;
+  background-color: #009889;
+  width: 140px;
+  height: 2px;
+}
+footer .footer-row p:last-child {
+  font-size: 16px;
+  opacity: 0.3;
+}
+footer .footer-copyright {
+  margin-top: 30px;
+  text-align: center;
+  opacity: 0.3;
 }
