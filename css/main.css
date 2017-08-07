@@ -40,8 +40,18 @@ body {
   max-width: 1180px;
 }
 
-.block {
-  background-color: pink;
+.btn {
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+.btn:active {
+  color: white;
+}
+.btn:visited {
+  color: white;
 }
 
 .our-team, .portfolio, .brands {
@@ -138,18 +148,18 @@ nav ul li a {
 }
 
 .logo-social-logo {
+  display: block;
   position: absolute;
   height: 45px;
   width: 100px;
   left: 35px;
   text-indent: -9999px;
+  cursor: pointer;
 }
 @media (min-width: 480px) {
   .logo-social-logo {
     position: relative;
     margin-left: 18%;
-    text-indent: -9999px;
-    cursor: pointer;
   }
 }
 
@@ -353,13 +363,18 @@ nav ul li a {
 
 .home {
   padding-top: 60px;
-  padding-bottom: 300px;
   background: url("../img/img_1.jpg") center no-repeat;
   background-size: cover;
-  height: 95vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+@media (max-width: 860px) {
+  .home {
+    height: 100vh;
+    padding-bottom: 0;
+  }
 }
 .home .home-wrapper {
   align-self: flex-start;
@@ -393,7 +408,12 @@ nav ul li a {
 }
 .home .arrows-wraper {
   margin: 0 auto;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
+}
+@media (max-width: 860px) {
+  .home .arrows-wraper {
+    margin-bottom: 100px;
+  }
 }
 
 .smaller-text {
@@ -433,7 +453,7 @@ nav ul li a {
     align-items: center;
   }
 }
-@media (min-width: 860px) and (max-width: 1100px) {
+@media (min-width: 861px) and (max-width: 1100px) {
   .check-us-wrapper {
     height: 450px;
     display: flex;
@@ -532,19 +552,15 @@ nav ul li a {
   background-size: cover;
 }
 
-.team-members {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
 .team-member-wrapper {
   color: black;
   text-align: center;
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
-@media (min-width: 860px) {
+@media (min-width: 861px) {
   .team-member-wrapper {
     flex-direction: row;
   }
@@ -747,10 +763,29 @@ nav ul li a {
   }
 }
 .portfolio-projects .portfolio-projects-thumbnail-wrapper .portfolio-projects-thumbnail {
+  position: relative;
   width: 100%;
   height: 0;
   padding-top: 92.857%;
   background-size: 100%;
+  -webkit-filter: grayscale(100%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+.portfolio-projects .portfolio-projects-thumbnail-wrapper .portfolio-projects-thumbnail:hover {
+  -webkit-filter: saturate(1) contrast(120%);
+  /* Safari 6.0 - 9.0 */
+  filter: saturate(1) contrast(120%);
+  cursor: pointer;
+}
+.portfolio-projects .portfolio-projects-thumbnail-wrapper .portfolio-projects-thumbnail svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.portfolio-projects .portfolio-projects-thumbnail-wrapper .portfolio-projects-thumbnail svg:hover {
+  opacity: 0.4;
 }
 
 .project1 {
@@ -832,16 +867,11 @@ nav ul li a {
 .project20 {
   background: url("../img/projects/projects_21.jpg") center no-repeat;
 }
-@media (min-width: 480px) and (max-width: 860px) {
-  .project20 {
-    display: none;
-  }
-}
 
 .project21 {
   background: url("../img/projects/projects_22.jpg") center no-repeat;
 }
-@media (min-width: 860px) and (max-width: 1100px) {
+@media (min-width: 480px) and (max-width: 1100px) {
   .project21 {
     display: none;
   }
@@ -856,7 +886,7 @@ nav ul li a {
   background: url("../img//brands/brands_S.png") center no-repeat;
   height: 700px;
 }
-@media (min-width: 860px) and (max-width: 1100px) {
+@media (min-width: 861px) and (max-width: 1100px) {
   .brands-lists {
     background: url("../img//brands/brands_M.png") center no-repeat;
   }
@@ -869,7 +899,7 @@ nav ul li a {
 
 footer {
   background-color: #101010;
-  height: 315px;
+  height: 100%;
 }
 footer .footer-row {
   height: 236px;
@@ -881,23 +911,45 @@ footer .footer-row {
   align-items: center;
   text-align: center;
 }
+@media (min-width: 861px) and (max-width: 1100px) {
+  footer .footer-row {
+    justify-content: space-around;
+  }
+}
+@media (max-width: 860px) {
+  footer .footer-row {
+    flex-direction: column;
+    height: 100%;
+    padding: 20px 0;
+  }
+}
 footer .footer-row p:first-child {
-  font-size: 32px;
-  font-weight: 500px;
+  font-size: 28px;
+  font-weight: 300;
   text-transform: uppercase;
+  margin-bottom: 0;
+}
+@media (max-width: 860px) {
+  footer .footer-row p:first-child {
+    margin-top: 40px;
+  }
 }
 footer .footer-row hr {
   border: 0;
   background-color: #009889;
   width: 140px;
-  height: 2px;
+  height: 1px;
 }
 footer .footer-row p:last-child {
   font-size: 16px;
+  letter-spacing: 2px;
   opacity: 0.3;
+  margin-top: 25px;
 }
 footer .footer-copyright {
   margin-top: 30px;
+  margin-bottom: 20px;
   text-align: center;
   opacity: 0.3;
+  font-size: 12px;
 }

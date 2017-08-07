@@ -51,9 +51,21 @@ body	{
 	margin: 0 auto;
 	max-width: 1180px;
 }
-.block	{
-	background-color: pink;
+.btn	{
+	cursor: pointer;
+	text-decoration: none;
+	&:hover	{
+		opacity: 0.9;
+	}
+	&:active	{
+		color: white;
+	}
+	&:visited	{
+		color: white;
+	}
 }
+
+
 %sections-position	{
 	height: 300px;
 	display: flex;
@@ -93,60 +105,6 @@ body	{
 		}
 	}
 }
-
-
-// %sections-position	{
-// 	// padding-top: 50px;
-// 	// display: block;
-// 	// width: 100vw;
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: center;
-// 	height: 300px;
-// 	background-size: cover;
-// 	// width: auto;
-
-
-
-// }
-// .sections-wrapper	{
-// 	// padding-left:70%;
-// 	// margin-left: 20px;
-// 	// margin-right: 20px;
-// 	// min-width: 400px;
-// 	width: 100%;
-// 	max-width: 1080px;
-// 	height: 200px;
-// 	border: 2px solid white;
-// 	// text-align: center;
-// 	// margin: 0 auto;
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: center;
-// 	background-color: red;
-// 	.sections-wrapper-hiddenBox	{
-// 		// height: 100%;
-// 		background-color: pink;
-// 		// max-width: 1080px;
-// 		overflow: hidden;
-// 		display: inline-block;
-// 		line-height: 110%;
-// 		p	{
-// 			// margin-top: 30px; 
-// 			span	{
-// 			font-size: 18px;
-// 			}
-// 		}
-// 		h2	{
-// 		color: $primary-color;
-// 		font-size: 50px;
-// 		text-transform: uppercase;
-// 		margin-top: 0;
-		
-// 		}
-// 	}
-// }
-
 
 // ------------------ nav ---------------------
 
@@ -203,18 +161,17 @@ nav	{
 }
 
 .logo-social-logo	{
+	display: block;
 	position: absolute;
 	height: 45px;
 	width: 100px;
 	left: 35px;
 	text-indent: -9999px;
+	cursor: pointer;
 	@include breakpoint(480px)	{
 		position: relative;
 		margin-left: 18%;
-		text-indent: -9999px;
-		cursor: pointer;
 	}
-
 }
 
 // ------------------ menu ---------------------
@@ -402,15 +359,23 @@ nav	{
 
 .home	{
 	padding-top: 60px;
-	padding-bottom: 300px;
+	// padding-bottom: 100px;
+
 	background: url('../img/img_1.jpg') center  no-repeat;
 	background-size: cover;
-	height: 95vh;
+	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	@include breakpoint(480px)	{
 		// padding: 80px;
+	}
+	@include breakpoint(max-width 860px)	{
+		height: 100vh;
+		padding-bottom: 0;
+		// padding-bottom: 300px;
+
+
 	}
 	.home-wrapper	{
 
@@ -444,9 +409,12 @@ nav	{
 		}
 	}
 	.arrows-wraper	{
-			margin: 0 auto;
-			margin-bottom: 60px;
+		margin: 0 auto;
+		margin-bottom: 80px;
+		@include breakpoint(max-width 860px)	{
+			margin-bottom: 100px;
 		}
+	}
 }
 
 .smaller-text	{
@@ -494,7 +462,7 @@ nav	{
 		flex-direction: column;
 		align-items: center;
 	}
-	@include breakpoint(860px 1100px)	{
+	@include breakpoint(861px 1100px)	{
 		height: 450px;
 		display: flex;
 		justify-content: space-between;
@@ -611,8 +579,8 @@ nav	{
 // ---------------------------------- Team members -------------------------------------
 
 .team-members	{
-	margin-left: 20px;
-	margin-right: 20px;
+	// margin-left: 20px;
+	// margin-right: 20px;
 }
 .team-member-wrapper	{
 	color: $secondary-color;
@@ -620,11 +588,11 @@ nav	{
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	// align-items: center;
+	align-items: center;
 	// justify-content: center;
 	// margin-left: 20px;
 	// margin-right: 20px;
-	@include breakpoint(860px)	{
+	@include breakpoint(861px)	{
 		flex-direction: row;
 
 	}
@@ -829,13 +797,34 @@ nav	{
 
 		}
 		.portfolio-projects-thumbnail	{
+			position: relative;
 			width: 100%;
 			height: 0;
 			padding-top: 92.857%; 
 			background-size: 100%;
+			// opacity: 0.6;
+		    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+		    filter: grayscale(100%);
+			&:hover	{
+				-webkit-filter:saturate(1) contrast(120%); /* Safari 6.0 - 9.0 */
+			    filter:saturate(1) contrast(120%);
+			    cursor: pointer;
+			}
+			svg	{
+				// width: 40%;
+				// height: 40%;
+				// max-width: 204px;
+				// max-height: 70px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0;
+				&:hover	{
+					opacity: 0.4;
+				}
+			}
 		}
 	}
-
 }
 
 .project1	{
@@ -897,13 +886,10 @@ nav	{
 }
 .project20	{
 	background: url('../img/projects/projects_21.jpg') center  no-repeat;
-		@include breakpoint(480px 860px)	{
-		display: none;
-	}
 }
 .project21	{
 	background: url('../img/projects/projects_22.jpg') center  no-repeat;
-	@include breakpoint(860px 1100px)	{
+	@include breakpoint(480px 1100px)	{
 		display: none;
 	}
 }
@@ -923,7 +909,7 @@ nav	{
 .brands-lists	{
 	background: url('../img//brands/brands_S.png') center  no-repeat;  // pewnie zmiana na jpg jeśli sprite'y
 	height: 700px;
-	@include breakpoint(860px 1100px)	{
+	@include breakpoint(861px 1100px)	{
 		background: url('../img//brands/brands_M.png') center  no-repeat;
 	}
 	@include breakpoint(1100px)	{
@@ -935,7 +921,7 @@ nav	{
 
 footer	{
 	background-color: #101010;
-	height: 315px;
+	height: 100%;
 	.footer-row	{
 		height: 236px;
 		margin: 0 auto;
@@ -945,26 +931,43 @@ footer	{
 		justify-content: space-between;
 		align-items: center;
 		text-align: center;
+		@include breakpoint(861px 1100px)	{
+			justify-content: space-around;
+		}
+		@include breakpoint(max-width 860px)	{
+			flex-direction: column;
+			height: 100%;
+			padding: 20px 0;
+
+		}
 
 		p:first-child	{
-			font-size: 32px;
-			font-weight: 500px;
+			font-size: 28px;
+			font-weight: 300;
 			text-transform: uppercase;
+			margin-bottom: 0;
+			@include breakpoint(max-width 860px)	{
+				margin-top: 40px;
+			}
 		}
 		hr	{
 			border: 0;
 			background-color: #009889;
 			width: 140px;
-			height: 2px;
+			height: 1px;
 		}
 		p:last-child	{
 			font-size: 16px;
+			letter-spacing: 2px;
 			opacity: 0.3;
+			margin-top: 25px;
 		}
 	}
 	.footer-copyright	{
 		margin-top: 30px;
+		margin-bottom: 20px;
 		text-align: center;
 		opacity: 0.3;
+		font-size: 12px;
 	}
 }
