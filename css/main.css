@@ -43,6 +43,7 @@ body {
 .btn {
   cursor: pointer;
   text-decoration: none;
+  color: white;
 }
 .btn:hover {
   opacity: 0.9;
@@ -778,13 +779,13 @@ nav ul li a {
   filter: saturate(1) contrast(120%);
   cursor: pointer;
 }
-.portfolio-projects .portfolio-projects-thumbnail-wrapper .portfolio-projects-thumbnail svg {
+.portfolio-projects .portfolio-projects-thumbnail-wrapper .portfolio-projects-thumbnail embed {
   position: absolute;
-  top: 0;
+  top: 20%;
   left: 0;
   opacity: 0;
 }
-.portfolio-projects .portfolio-projects-thumbnail-wrapper .portfolio-projects-thumbnail svg:hover {
+.portfolio-projects .portfolio-projects-thumbnail-wrapper .portfolio-projects-thumbnail embed:hover {
   opacity: 0.4;
 }
 
