@@ -27,7 +27,8 @@ $logo-social-layout: horizontal;
 $primary-color: #ffffff;
 $secondary-color: invert($primary-color);
 $basic-font: 'Quicksand', sans-serif;
-$secondary-font: 'Dosis', sans-serif;;
+$secondary-font: 'Dosis', sans-serif;
+$nav-mobile: (480px) (orientation landscape);
 
 // $bold-font: ;
 
@@ -112,6 +113,10 @@ body	{
 
 nav	{
 	height: 60px;
+
+	@include breakpoint(orientation landscape)	{
+		height: 60px;
+	}
 	@include breakpoint(480px)	{
 		height: 80px;
 	}
@@ -143,8 +148,14 @@ nav	{
 	@include breakpoint(480px)	{
 		width: 72%;
 	}
+	@include breakpoint(orientation landscape)	{
+		width: 0;
+	}
 	ul	{
 		display: none;
+		@include breakpoint(orientation landscape)	{
+			display: none;
+		}
 		@include breakpoint(720px)	{
 			display: block;
 			margin-right: 30px;
@@ -173,6 +184,10 @@ nav	{
 		position: relative;
 		margin-left: 18%;
 	}
+	@include breakpoint(orientation landscape)	{
+		position: absolute;
+		margin-left: 0;
+	}
 }
 
 // ------------------ menu ---------------------
@@ -181,12 +196,19 @@ nav	{
 		width: 28%;
 
 	}
+	@include breakpoint(orientation landscape)	{
+		width: 100%;                                              //?????
+	}
 	background-color: $primary-color;
 	display: flex;
 	@include breakpoint(480px)	{
 		flex-direction: column;
 		background-color: $secondary-color;
 	}
+	@include breakpoint(orientation landscape)	{
+		background-color: $primary-color;
+		flex-direction: row;                                              //?????
+	}	
 
 	width: 100%;
 	height: 100%;
@@ -197,14 +219,19 @@ nav	{
 		display: block;
 		padding-top: 5px;
 		align-items: center;
-
+	}
+	@include breakpoint(orientation landscape)	{
+		display: inline-block;
+		padding-top: 0;
 	}
 	width: 100%;
 	ul	{
 		clear: both;
 		@include breakpoint(480px)	{
 			background-color: $secondary-color;
-
+		}
+		@include breakpoint(orientation landscape)	{
+			background-color: $primary-color;
 		}
 		margin: 0;
 		padding: 0;
@@ -222,6 +249,9 @@ nav	{
 			@include breakpoint(480px)	{
 				// background-color: $secondary-color;
 				color: $primary-color;
+			}
+			@include breakpoint(orientation landscape)	{
+				color: $secondary-color;
 			}
 			&:first-child	{
 				padding-top: 5px;
@@ -242,12 +272,18 @@ nav	{
 				@include breakpoint(480px)	{
 					color: $primary-color;
 				}
+				@include breakpoint(orientation landscape)	{
+					color: $secondary-color;
+				}
 				&:hover	{
 					color: $primary-color;
 					background-color: $secondary-color;
 					@include breakpoint(480px)	{
 						color: $primary-color;
 						background-color: #262626;
+					}
+					@include breakpoint(orientation landscape)	{
+						color: $secondary-color;
 					}
 					
 				}
@@ -260,6 +296,9 @@ nav	{
 	background-color: $secondary-color;
 	@include breakpoint(480px)	{
 		background-color: $primary-color;
+	}
+	@include breakpoint(orientation landscape)	{
+		background-color: $secondary-color;
 	}
 	display: block;
 	content: '';
@@ -280,6 +319,10 @@ nav	{
 		float: none;
 		padding-bottom: 33px;
 	}
+	@include breakpoint(orientation landscape)	{
+		float: right;
+		padding: 33px 30px 26px 30px;
+	}
 	cursor: pointer;
 	display: inline-block;
 	
@@ -289,6 +332,9 @@ nav	{
 		background-color: $secondary-color;
 		@include breakpoint(480px)	{
 			background-color: $primary-color;
+		}
+		@include breakpoint(orientation landscape)	{
+			background-color: $secondary-color;
 		}
 		display: block;
 		height: 1px;
@@ -316,6 +362,10 @@ nav	{
 				left: 35px;
 				top: -25px;
 				color: $primary-color;
+			}
+			@include breakpoint(orientation landscape)	{
+				display: none;
+				clear: both;
 			}
 		}
 	}
@@ -359,6 +409,7 @@ nav	{
 }
 
 .home	{
+	position: relative;
 	padding-top: 60px;
 	// padding-bottom: 100px;
 
@@ -367,7 +418,7 @@ nav	{
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	// justify-content: space-between;
 	@include breakpoint(480px)	{
 		// padding: 80px;
 	}
@@ -379,14 +430,19 @@ nav	{
 
 	}
 	.home-wrapper	{
-
-		align-self: flex-start;
+		transform: translateY(30vh); //portrait
+		@include breakpoint(orientation landscape)	{
+			transform: translateY(5vh);                                              //?????
+		}
 		overflow: hidden;
 		line-height: 250%;
-		margin-top: 15%;
 		margin-left: auto;
 		margin-right: auto;
 		text-align: center;
+		@include breakpoint(max-width 960px)	{
+			align-self: flex-start; // landscape
+			margin-top: 2%;  //landscape
+		}
 		h1	{
 			margin-top: 0;
 			font-size: 52px;
@@ -394,13 +450,16 @@ nav	{
 			font-weight: 500;
 			@include breakpoint(750px)	{
 			font-size: 74px;
-
+			}
+			@include breakpoint(max-width 960px orientation landscape)	{
+				font-size: 42px;
 			}
 		}
 		p:last-child	{
 			padding-top: 25px;
 
 		}
+
 		.btn	{
 			border: 2px white solid;
 			border-radius: 25px;
@@ -410,10 +469,19 @@ nav	{
 		}
 	}
 	.arrows-wraper	{
+		position: absolute;
 		margin: 0 auto;
-		margin-bottom: 80px;
+		left: 50%;
+		bottom: 10px;
+		transform: translateX(-50%);
+		@include breakpoint(max-height 520px)	{
+			display: none;
+		}
 		@include breakpoint(max-width 860px)	{
 			margin-bottom: 100px;
+		}
+		@include breakpoint(orientation landscape)	{
+			margin-bottom: 60px;
 		}
 	}
 }
@@ -428,7 +496,9 @@ nav	{
 				font-size: 32px;
 				font-family: $secondary-font;
 				font-weight: 300;
-
+				@include breakpoint(orientation landscape)	{
+					font-size: 22px;
+				}
 				&:before	{
 					@extend %middle-height-line;
 					right: 100%;

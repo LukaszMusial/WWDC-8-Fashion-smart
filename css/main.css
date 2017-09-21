@@ -98,6 +98,11 @@ nav {
   z-index: 10;
   width: 100%;
 }
+@media (orientation: landscape) {
+  nav {
+    height: 60px;
+  }
+}
 @media (min-width: 480px) {
   nav {
     height: 80px;
@@ -129,8 +134,18 @@ nav ul li a {
     width: 72%;
   }
 }
+@media (orientation: landscape) {
+  .logo-social-wrapper {
+    width: 0;
+  }
+}
 .logo-social-wrapper ul {
   display: none;
+}
+@media (orientation: landscape) {
+  .logo-social-wrapper ul {
+    display: none;
+  }
 }
 @media (min-width: 720px) {
   .logo-social-wrapper ul {
@@ -163,6 +178,12 @@ nav ul li a {
     margin-left: 18%;
   }
 }
+@media (orientation: landscape) {
+  .logo-social-logo {
+    position: absolute;
+    margin-left: 0;
+  }
+}
 
 .menu {
   background-color: #ffffff;
@@ -175,10 +196,21 @@ nav ul li a {
     width: 28%;
   }
 }
+@media (orientation: landscape) {
+  .menu {
+    width: 100%;
+  }
+}
 @media (min-width: 480px) {
   .menu {
     flex-direction: column;
     background-color: black;
+  }
+}
+@media (orientation: landscape) {
+  .menu {
+    background-color: #ffffff;
+    flex-direction: row;
   }
 }
 
@@ -190,6 +222,12 @@ nav ul li a {
     display: block;
     padding-top: 5px;
     align-items: center;
+  }
+}
+@media (orientation: landscape) {
+  .menu-wrapper {
+    display: inline-block;
+    padding-top: 0;
   }
 }
 .menu-wrapper ul {
@@ -214,12 +252,22 @@ nav ul li a {
     background-color: black;
   }
 }
+@media (orientation: landscape) {
+  .menu-wrapper ul {
+    background-color: #ffffff;
+  }
+}
 .menu-wrapper ul li {
   text-align: center;
 }
 @media (min-width: 480px) {
   .menu-wrapper ul li {
     color: #ffffff;
+  }
+}
+@media (orientation: landscape) {
+  .menu-wrapper ul li {
+    color: black;
   }
 }
 .menu-wrapper ul li:first-child {
@@ -237,6 +285,11 @@ nav ul li a {
     color: #ffffff;
   }
 }
+@media (orientation: landscape) {
+  .menu-wrapper ul li a {
+    color: black;
+  }
+}
 .menu-wrapper ul li a:hover {
   color: #ffffff;
   background-color: black;
@@ -245,6 +298,11 @@ nav ul li a {
   .menu-wrapper ul li a:hover {
     color: #ffffff;
     background-color: #262626;
+  }
+}
+@media (orientation: landscape) {
+  .menu-wrapper ul li a:hover {
+    color: black;
   }
 }
 
@@ -260,6 +318,11 @@ nav ul li a {
 @media (min-width: 480px) {
   .menu-icon .navicon:before, .menu-icon .navicon:after {
     background-color: #ffffff;
+  }
+}
+@media (orientation: landscape) {
+  .menu-icon .navicon:before, .menu-icon .navicon:after {
+    background-color: black;
   }
 }
 
@@ -294,6 +357,12 @@ nav ul li a {
     padding-bottom: 33px;
   }
 }
+@media (orientation: landscape) {
+  .menu-icon {
+    float: right;
+    padding: 33px 30px 26px 30px;
+  }
+}
 .menu-icon .navicon {
   background-color: black;
   display: block;
@@ -308,6 +377,11 @@ nav ul li a {
 @media (min-width: 480px) {
   .menu-icon .navicon {
     background-color: #ffffff;
+  }
+}
+@media (orientation: landscape) {
+  .menu-icon .navicon {
+    background-color: black;
   }
 }
 .menu-icon .navicon:before {
@@ -327,6 +401,12 @@ nav ul li a {
     left: 35px;
     top: -25px;
     color: #ffffff;
+  }
+}
+@media (orientation: landscape) {
+  .menu-icon .navicon p {
+    display: none;
+    clear: both;
   }
 }
 
@@ -363,13 +443,13 @@ nav ul li a {
 }
 
 .home {
+  position: relative;
   padding-top: 60px;
   background: url("../img/img_1.jpg") center no-repeat;
   background-size: cover;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 @media (max-width: 860px) {
   .home {
@@ -378,13 +458,23 @@ nav ul li a {
   }
 }
 .home .home-wrapper {
-  align-self: flex-start;
+  transform: translateY(30vh);
   overflow: hidden;
   line-height: 250%;
-  margin-top: 15%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+@media (orientation: landscape) {
+  .home .home-wrapper {
+    transform: translateY(5vh);
+  }
+}
+@media (max-width: 960px) {
+  .home .home-wrapper {
+    align-self: flex-start;
+    margin-top: 2%;
+  }
 }
 .home .home-wrapper h1 {
   margin-top: 0;
@@ -395,6 +485,11 @@ nav ul li a {
 @media (min-width: 750px) {
   .home .home-wrapper h1 {
     font-size: 74px;
+  }
+}
+@media (min-width: max-width) and (min-width: 960px) and (min-width: orientation) and (min-width: landscape) {
+  .home .home-wrapper h1 {
+    font-size: 42px;
   }
 }
 .home .home-wrapper p:last-child {
@@ -408,12 +503,25 @@ nav ul li a {
   text-transform: uppercase;
 }
 .home .arrows-wraper {
+  position: absolute;
   margin: 0 auto;
-  margin-bottom: 80px;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+}
+@media (max-height: 520px) {
+  .home .arrows-wraper {
+    display: none;
+  }
 }
 @media (max-width: 860px) {
   .home .arrows-wraper {
     margin-bottom: 100px;
+  }
+}
+@media (orientation: landscape) {
+  .home .arrows-wraper {
+    margin-bottom: 60px;
   }
 }
 
@@ -427,6 +535,11 @@ nav ul li a {
   font-size: 32px;
   font-family: "Dosis", sans-serif;
   font-weight: 300;
+}
+@media (orientation: landscape) {
+  .smaller-text span {
+    font-size: 22px;
+  }
 }
 .smaller-text span:before {
   right: 100%;
