@@ -103,12 +103,12 @@ nav {
   z-index: 10;
   width: 100%;
 }
-@media (max-width: 730px) and (orientation: landscape) {
+@media (max-width: 740px) and (orientation: landscape) {
   nav {
     height: 60px;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 740px) {
   nav {
     height: 60px;
   }
@@ -139,7 +139,7 @@ nav ul li a {
     width: 72%;
   }
 }
-@media (max-width: 730px) and (orientation: landscape) {
+@media (max-width: 740px) and (orientation: landscape) {
   .logo-social-wrapper {
     width: 0;
   }
@@ -147,12 +147,12 @@ nav ul li a {
 .logo-social-wrapper ul {
   display: none;
 }
-@media (max-width: 730px) and (orientation: landscape) {
+@media (max-width: 740px) and (orientation: landscape) {
   .logo-social-wrapper ul {
     display: none;
   }
 }
-@media (min-width: 720px) {
+@media (min-width: 741px) {
   .logo-social-wrapper ul {
     display: block;
     margin-right: 30px;
@@ -183,7 +183,7 @@ nav ul li a {
     margin-left: 18%;
   }
 }
-@media (max-width: 730px) and (orientation: landscape) {
+@media (max-width: 740px) and (orientation: landscape) {
   .logo-social-logo {
     position: absolute;
     margin-left: 0;
@@ -196,23 +196,23 @@ nav ul li a {
   width: 100%;
   height: 100%;
 }
-@media (min-width: 480px) {
+@media (min-width: 740px) {
   .menu {
     width: 28%;
   }
 }
-@media (max-width: 730px) and (orientation: landscape) {
+@media (max-width: 740px) and (orientation: landscape) {
   .menu {
     width: 100%;
   }
 }
-@media (min-width: 480px) {
+@media (min-width: 740px) {
   .menu {
     flex-direction: column;
     background-color: black;
   }
 }
-@media (max-width: 730px) and (orientation: landscape) {
+@media (max-width: 740px) and (orientation: landscape) {
   .menu {
     background-color: #ffffff;
     flex-direction: row;
@@ -222,14 +222,14 @@ nav ul li a {
 .menu-wrapper {
   width: 100%;
 }
-@media (min-width: 480px) {
+@media (min-width: 740px) {
   .menu-wrapper {
     display: block;
     padding-top: 5px;
     align-items: center;
   }
 }
-@media (max-width: 730px) and (orientation: landscape) {
+@media (max-width: 740px) and (orientation: landscape) {
   .menu-wrapper {
     display: inline-block;
     padding-top: 0;
@@ -252,12 +252,12 @@ nav ul li a {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-@media (min-width: 480px) {
+@media (min-width: 740px) {
   .menu-wrapper ul {
     background-color: black;
   }
 }
-@media (max-width: 730px) and (orientation: landscape) {
+@media (max-width: 740px) and (orientation: landscape) {
   .menu-wrapper ul {
     background-color: #ffffff;
   }
@@ -265,12 +265,12 @@ nav ul li a {
 .menu-wrapper ul li {
   text-align: center;
 }
-@media (min-width: 480px) {
+@media (min-width: 740px) {
   .menu-wrapper ul li {
     color: #ffffff;
   }
 }
-@media (max-width: 730px) and (orientation: landscape) {
+@media (max-width: 740px) and (orientation: landscape) {
   .menu-wrapper ul li {
     color: black;
   }
@@ -285,12 +285,12 @@ nav ul li a {
   padding: 20px 0;
   color: black;
 }
-@media (min-width: 480px) {
+@media (min-width: 740px) {
   .menu-wrapper ul li a {
     color: #ffffff;
   }
 }
-@media (max-width: 730px) and (orientation: landscape) {
+@media (max-width: 740px) and (orientation: landscape) {
   .menu-wrapper ul li a {
     color: black;
   }
@@ -299,13 +299,13 @@ nav ul li a {
   color: #ffffff;
   background-color: black;
 }
-@media (min-width: 480px) {
+@media (min-width: 740px) {
   .menu-wrapper ul li a:hover {
     color: #ffffff;
     background-color: #262626;
   }
 }
-@media (max-width: 730px) and (orientation: landscape) {
+@media (max-width: 740px) and (orientation: landscape) {
   .menu-wrapper ul li a:hover {
     color: black;
   }
@@ -320,12 +320,12 @@ nav ul li a {
   height: 1px;
   width: 15px;
 }
-@media (min-width: 480px) {
+@media (min-width: 740px) {
   .menu-icon .navicon:before, .menu-icon .navicon:after {
     background-color: #ffffff;
   }
 }
-@media (max-width: 730px) and (orientation: landscape) {
+@media (max-width: 740px) and (orientation: landscape) {
   .menu-icon .navicon:before, .menu-icon .navicon:after {
     background-color: black;
   }
@@ -356,13 +356,13 @@ nav ul li a {
   -webkit-user-select: none;
   user-select: none;
 }
-@media (min-width: 480px) {
+@media (min-width: 740px) {
   .menu-icon {
     float: none;
     padding-bottom: 33px;
   }
 }
-@media (max-width: 730px) and (orientation: landscape) {
+@media (max-width: 740px) and (orientation: landscape) {
   .menu-icon {
     float: right;
     padding: 33px 30px 26px 30px;
@@ -379,12 +379,12 @@ nav ul li a {
   -webkit-transition-property: background;
   transition-property: background;
 }
-@media (min-width: 480px) {
+@media (min-width: 740px) {
   .menu-icon .navicon {
     background-color: #ffffff;
   }
 }
-@media (max-width: 730px) and (orientation: landscape) {
+@media (max-width: 740px) and (orientation: landscape) {
   .menu-icon .navicon {
     background-color: black;
   }
@@ -399,7 +399,7 @@ nav ul li a {
   clear: both;
   display: none;
 }
-@media (min-width: 480px) {
+@media (min-width: 740px) {
   .menu-icon .navicon p {
     display: inline;
     position: absolute;
@@ -408,7 +408,7 @@ nav ul li a {
     color: #ffffff;
   }
 }
-@media (max-width: 730px) and (orientation: landscape) {
+@media (max-width: 740px) and (orientation: landscape) {
   .menu-icon .navicon p {
     display: none;
     clear: both;
@@ -470,7 +470,7 @@ nav ul li a {
   margin-right: auto;
   text-align: center;
 }
-@media (max-width: 730px) and (orientation: landscape) {
+@media (max-width: 740px) and (orientation: landscape) {
   .home .home-wrapper {
     transform: translateY(5vh);
   }
@@ -535,7 +535,7 @@ nav ul li a {
     margin-bottom: 100px;
   }
 }
-@media (orientation: landscape) {
+@media (max-width: 740px) and (orientation: landscape) {
   .home .arrows-wraper {
     margin-bottom: 60px;
   }

@@ -28,7 +28,7 @@ $primary-color: #ffffff;
 $secondary-color: invert($primary-color);
 $basic-font: 'Quicksand', sans-serif;
 $secondary-font: 'Dosis', sans-serif;
-$nav-mobile: (max-width 730px) (orientation landscape);
+$nav-mobile: (max-width 740px) (orientation landscape);
 
 // $bold-font: ;
 
@@ -119,7 +119,7 @@ nav	{
 	@include breakpoint($nav-mobile)	{
 		height: 60px;
 	}
-	@include breakpoint(max-width 480px)	{
+	@include breakpoint(max-width 740px)	{
 		height: 60px;
 	}
 	display: flex;
@@ -158,7 +158,7 @@ nav	{
 		@include breakpoint($nav-mobile)	{
 			display: none;
 		}
-		@include breakpoint(720px)	{
+		@include breakpoint(741px)	{
 			display: block;
 			margin-right: 30px;
 			li	{
@@ -194,7 +194,7 @@ nav	{
 
 // ------------------ menu ---------------------
 .menu	{
-	@include breakpoint(480px)	{
+	@include breakpoint(740px)	{
 		width: 28%;
 
 	}
@@ -203,7 +203,7 @@ nav	{
 	}
 	background-color: $primary-color;
 	display: flex;
-	@include breakpoint(480px)	{
+	@include breakpoint(740px)	{
 		flex-direction: column;
 		background-color: $secondary-color;
 	}
@@ -217,7 +217,7 @@ nav	{
 
 }
 .menu-wrapper	{
-	@include breakpoint(480px)	{
+	@include breakpoint(740px)	{
 		display: block;
 		padding-top: 5px;
 		align-items: center;
@@ -229,7 +229,7 @@ nav	{
 	width: 100%;
 	ul	{
 		clear: both;
-		@include breakpoint(480px)	{
+		@include breakpoint(740px)	{
 			background-color: $secondary-color;
 		}
 		@include breakpoint($nav-mobile)	{
@@ -248,7 +248,7 @@ nav	{
 		li	{
 			text-align: center;
 			// background-color: $primary-color;
-			@include breakpoint(480px)	{
+			@include breakpoint(740px)	{
 				// background-color: $secondary-color;
 				color: $primary-color;
 			}
@@ -271,7 +271,7 @@ nav	{
 			a	{
 				padding: 20px 0;
 				color: $secondary-color;
-				@include breakpoint(480px)	{
+				@include breakpoint(740px)	{
 					color: $primary-color;
 				}
 				@include breakpoint($nav-mobile)	{
@@ -280,7 +280,7 @@ nav	{
 				&:hover	{
 					color: $primary-color;
 					background-color: $secondary-color;
-					@include breakpoint(480px)	{
+					@include breakpoint(740px)	{
 						color: $primary-color;
 						background-color: #262626;
 					}
@@ -296,7 +296,7 @@ nav	{
 
 %navicon-bar	{
 	background-color: $secondary-color;
-	@include breakpoint(480px)	{
+	@include breakpoint(740px)	{
 		background-color: $primary-color;
 	}
 	@include breakpoint($nav-mobile)	{
@@ -317,7 +317,7 @@ nav	{
 .menu-icon	{
 	float: right;
 	padding: 33px 30px 26px 30px;
-	@include breakpoint(480px)	{
+	@include breakpoint(740px)	{
 		float: none;
 		padding-bottom: 33px;
 	}
@@ -332,7 +332,7 @@ nav	{
 	@include user-select(none);
 	.navicon	{
 		background-color: $secondary-color;
-		@include breakpoint(480px)	{
+		@include breakpoint(740px)	{
 			background-color: $primary-color;
 		}
 		@include breakpoint($nav-mobile)	{
@@ -358,7 +358,7 @@ nav	{
 		p	{
 			clear: both;
 			display: none;
-			@include breakpoint(480px)	{
+			@include breakpoint(740px)	{
 				display: inline;
 				position: absolute;
 				left: 35px;
@@ -489,7 +489,7 @@ nav	{
 		@include breakpoint(max-width 860px)	{
 			margin-bottom: 100px;
 		}
-		@include breakpoint(orientation landscape)	{
+		@include breakpoint($nav-mobile)	{
 			margin-bottom: 60px;
 		}
 	}
@@ -812,7 +812,7 @@ nav	{
 }
 
 .invert-description	{
-	order:1;
+	order: 1;
 	padding: 20px 0px 20px 20px;
 		@include breakpoint(max-width 860px)	{
 			padding: 20px 20px 0px 20px;
@@ -821,7 +821,7 @@ nav	{
 }
 
 .invert-photo	{
-	order:2;
+	order: 2;
 	padding: 20px 20px 20px 0px;
 	@include breakpoint(max-width 860px)	{
 		padding: 0px 20px 20px 20px;
