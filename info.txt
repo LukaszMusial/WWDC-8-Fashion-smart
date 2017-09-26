@@ -4,10 +4,16 @@ circle progress bar:
 
 http://codepen.io/saadeghi/pen/IBhfJ
 
+responsywnoœæ za³atwoina na mobile zosta³a tylko strza³ka z jumbotron
+Firmy jpeg jest za du¿y przy s5
+przy mobile zmniejszyæ nag³ówki sekcji \/
+
 JS po html i css:
 Menu po klikiniêciu poza menu siê chowa,
 menu mobile po rozsuniêciu przesuwa diva jumbotron,
+menu po klikniêciu linka siê chowa
 animacja w divie odpala siê po scrollu na tego diva
+p³ynny scroll
 
 http://web.archive.org/web/20140213105950/http://itnewb.com/tutorial/Creating-the-Smooth-Scroll-Effect-with-JavaScript
 https://www.sitepoint.com/smooth-scrolling-vanilla-javascript/

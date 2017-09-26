@@ -88,9 +88,14 @@ body {
   text-transform: uppercase;
   margin-top: 0;
 }
+@media (max-width: 660px) {
+  .sections-wrapper .sections-wrapper-hiddenBox h2 {
+    font-size: 38px;
+  }
+}
 
 nav {
-  height: 60px;
+  height: 80px;
   display: flex;
   flex-direction: row;
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
@@ -98,14 +103,14 @@ nav {
   z-index: 10;
   width: 100%;
 }
-@media (orientation: landscape) {
+@media (max-width: 730px) and (orientation: landscape) {
   nav {
     height: 60px;
   }
 }
-@media (min-width: 480px) {
+@media (max-width: 480px) {
   nav {
-    height: 80px;
+    height: 60px;
   }
 }
 nav ul {
@@ -134,7 +139,7 @@ nav ul li a {
     width: 72%;
   }
 }
-@media (orientation: landscape) {
+@media (max-width: 730px) and (orientation: landscape) {
   .logo-social-wrapper {
     width: 0;
   }
@@ -142,7 +147,7 @@ nav ul li a {
 .logo-social-wrapper ul {
   display: none;
 }
-@media (orientation: landscape) {
+@media (max-width: 730px) and (orientation: landscape) {
   .logo-social-wrapper ul {
     display: none;
   }
@@ -178,7 +183,7 @@ nav ul li a {
     margin-left: 18%;
   }
 }
-@media (orientation: landscape) {
+@media (max-width: 730px) and (orientation: landscape) {
   .logo-social-logo {
     position: absolute;
     margin-left: 0;
@@ -196,7 +201,7 @@ nav ul li a {
     width: 28%;
   }
 }
-@media (orientation: landscape) {
+@media (max-width: 730px) and (orientation: landscape) {
   .menu {
     width: 100%;
   }
@@ -207,7 +212,7 @@ nav ul li a {
     background-color: black;
   }
 }
-@media (orientation: landscape) {
+@media (max-width: 730px) and (orientation: landscape) {
   .menu {
     background-color: #ffffff;
     flex-direction: row;
@@ -224,7 +229,7 @@ nav ul li a {
     align-items: center;
   }
 }
-@media (orientation: landscape) {
+@media (max-width: 730px) and (orientation: landscape) {
   .menu-wrapper {
     display: inline-block;
     padding-top: 0;
@@ -252,7 +257,7 @@ nav ul li a {
     background-color: black;
   }
 }
-@media (orientation: landscape) {
+@media (max-width: 730px) and (orientation: landscape) {
   .menu-wrapper ul {
     background-color: #ffffff;
   }
@@ -265,7 +270,7 @@ nav ul li a {
     color: #ffffff;
   }
 }
-@media (orientation: landscape) {
+@media (max-width: 730px) and (orientation: landscape) {
   .menu-wrapper ul li {
     color: black;
   }
@@ -285,7 +290,7 @@ nav ul li a {
     color: #ffffff;
   }
 }
-@media (orientation: landscape) {
+@media (max-width: 730px) and (orientation: landscape) {
   .menu-wrapper ul li a {
     color: black;
   }
@@ -300,7 +305,7 @@ nav ul li a {
     background-color: #262626;
   }
 }
-@media (orientation: landscape) {
+@media (max-width: 730px) and (orientation: landscape) {
   .menu-wrapper ul li a:hover {
     color: black;
   }
@@ -320,7 +325,7 @@ nav ul li a {
     background-color: #ffffff;
   }
 }
-@media (orientation: landscape) {
+@media (max-width: 730px) and (orientation: landscape) {
   .menu-icon .navicon:before, .menu-icon .navicon:after {
     background-color: black;
   }
@@ -357,7 +362,7 @@ nav ul li a {
     padding-bottom: 33px;
   }
 }
-@media (orientation: landscape) {
+@media (max-width: 730px) and (orientation: landscape) {
   .menu-icon {
     float: right;
     padding: 33px 30px 26px 30px;
@@ -379,7 +384,7 @@ nav ul li a {
     background-color: #ffffff;
   }
 }
-@media (orientation: landscape) {
+@media (max-width: 730px) and (orientation: landscape) {
   .menu-icon .navicon {
     background-color: black;
   }
@@ -403,7 +408,7 @@ nav ul li a {
     color: #ffffff;
   }
 }
-@media (orientation: landscape) {
+@media (max-width: 730px) and (orientation: landscape) {
   .menu-icon .navicon p {
     display: none;
     clear: both;
@@ -465,7 +470,7 @@ nav ul li a {
   margin-right: auto;
   text-align: center;
 }
-@media (orientation: landscape) {
+@media (max-width: 730px) and (orientation: landscape) {
   .home .home-wrapper {
     transform: translateY(5vh);
   }
@@ -492,6 +497,11 @@ nav ul li a {
     font-size: 42px;
   }
 }
+@media (max-width: 660px) {
+  .home .home-wrapper h1 {
+    font-size: 32px;
+  }
+}
 .home .home-wrapper p:last-child {
   padding-top: 25px;
 }
@@ -501,6 +511,12 @@ nav ul li a {
   padding: 12px 55px;
   font-size: 18px;
   text-transform: uppercase;
+}
+@media (max-width: 660px) {
+  .home .home-wrapper .btn {
+    font-size: 14px;
+    padding: 8px 36px;
+  }
 }
 .home .arrows-wraper {
   position: absolute;
@@ -539,6 +555,11 @@ nav ul li a {
 @media (orientation: landscape) {
   .smaller-text span {
     font-size: 22px;
+  }
+}
+@media (max-width: 660px) {
+  .smaller-text span {
+    font-size: 24px;
   }
 }
 .smaller-text span:before {

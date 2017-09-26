@@ -28,7 +28,7 @@ $primary-color: #ffffff;
 $secondary-color: invert($primary-color);
 $basic-font: 'Quicksand', sans-serif;
 $secondary-font: 'Dosis', sans-serif;
-$nav-mobile: (480px) (orientation landscape);
+$nav-mobile: (max-width 730px) (orientation landscape);
 
 // $bold-font: ;
 
@@ -99,11 +99,13 @@ body	{
 			}
 		}
 		h2	{
-		color: $primary-color;
-		font-size: 50px;
-		text-transform: uppercase;
-		margin-top: 0;
-		
+			color: $primary-color;
+			font-size: 50px;
+			text-transform: uppercase;
+			margin-top: 0;
+			@include breakpoint(max-width 660px)	{
+				font-size: 38px;
+			}
 		}
 	}
 }
@@ -112,13 +114,13 @@ body	{
 
 
 nav	{
-	height: 60px;
+	height: 80px;
 
-	@include breakpoint(orientation landscape)	{
+	@include breakpoint($nav-mobile)	{
 		height: 60px;
 	}
-	@include breakpoint(480px)	{
-		height: 80px;
+	@include breakpoint(max-width 480px)	{
+		height: 60px;
 	}
 	display: flex;
 	flex-direction: row;
@@ -148,12 +150,12 @@ nav	{
 	@include breakpoint(480px)	{
 		width: 72%;
 	}
-	@include breakpoint(orientation landscape)	{
+	@include breakpoint($nav-mobile)	{
 		width: 0;
 	}
 	ul	{
 		display: none;
-		@include breakpoint(orientation landscape)	{
+		@include breakpoint($nav-mobile)	{
 			display: none;
 		}
 		@include breakpoint(720px)	{
@@ -184,7 +186,7 @@ nav	{
 		position: relative;
 		margin-left: 18%;
 	}
-	@include breakpoint(orientation landscape)	{
+	@include breakpoint($nav-mobile)	{
 		position: absolute;
 		margin-left: 0;
 	}
@@ -196,7 +198,7 @@ nav	{
 		width: 28%;
 
 	}
-	@include breakpoint(orientation landscape)	{
+	@include breakpoint($nav-mobile)	{
 		width: 100%;                                              //?????
 	}
 	background-color: $primary-color;
@@ -205,7 +207,7 @@ nav	{
 		flex-direction: column;
 		background-color: $secondary-color;
 	}
-	@include breakpoint(orientation landscape)	{
+	@include breakpoint($nav-mobile)	{
 		background-color: $primary-color;
 		flex-direction: row;                                              //?????
 	}	
@@ -220,7 +222,7 @@ nav	{
 		padding-top: 5px;
 		align-items: center;
 	}
-	@include breakpoint(orientation landscape)	{
+	@include breakpoint($nav-mobile)	{
 		display: inline-block;
 		padding-top: 0;
 	}
@@ -230,7 +232,7 @@ nav	{
 		@include breakpoint(480px)	{
 			background-color: $secondary-color;
 		}
-		@include breakpoint(orientation landscape)	{
+		@include breakpoint($nav-mobile)	{
 			background-color: $primary-color;
 		}
 		margin: 0;
@@ -250,7 +252,7 @@ nav	{
 				// background-color: $secondary-color;
 				color: $primary-color;
 			}
-			@include breakpoint(orientation landscape)	{
+			@include breakpoint($nav-mobile)	{
 				color: $secondary-color;
 			}
 			&:first-child	{
@@ -272,7 +274,7 @@ nav	{
 				@include breakpoint(480px)	{
 					color: $primary-color;
 				}
-				@include breakpoint(orientation landscape)	{
+				@include breakpoint($nav-mobile)	{
 					color: $secondary-color;
 				}
 				&:hover	{
@@ -282,7 +284,7 @@ nav	{
 						color: $primary-color;
 						background-color: #262626;
 					}
-					@include breakpoint(orientation landscape)	{
+					@include breakpoint($nav-mobile)	{
 						color: $secondary-color;
 					}
 					
@@ -297,7 +299,7 @@ nav	{
 	@include breakpoint(480px)	{
 		background-color: $primary-color;
 	}
-	@include breakpoint(orientation landscape)	{
+	@include breakpoint($nav-mobile)	{
 		background-color: $secondary-color;
 	}
 	display: block;
@@ -319,7 +321,7 @@ nav	{
 		float: none;
 		padding-bottom: 33px;
 	}
-	@include breakpoint(orientation landscape)	{
+	@include breakpoint($nav-mobile)	{
 		float: right;
 		padding: 33px 30px 26px 30px;
 	}
@@ -333,7 +335,7 @@ nav	{
 		@include breakpoint(480px)	{
 			background-color: $primary-color;
 		}
-		@include breakpoint(orientation landscape)	{
+		@include breakpoint($nav-mobile)	{
 			background-color: $secondary-color;
 		}
 		display: block;
@@ -363,7 +365,7 @@ nav	{
 				top: -25px;
 				color: $primary-color;
 			}
-			@include breakpoint(orientation landscape)	{
+			@include breakpoint($nav-mobile)	{
 				display: none;
 				clear: both;
 			}
@@ -431,7 +433,7 @@ nav	{
 	}
 	.home-wrapper	{
 		transform: translateY(30vh); //portrait
-		@include breakpoint(orientation landscape)	{
+		@include breakpoint($nav-mobile)	{
 			transform: translateY(5vh);                                              //?????
 		}
 		overflow: hidden;
@@ -454,6 +456,9 @@ nav	{
 			@include breakpoint(max-width 960px orientation landscape)	{
 				font-size: 42px;
 			}
+			@include breakpoint(max-width 660px)	{
+				font-size: 32px;
+			}
 		}
 		p:last-child	{
 			padding-top: 25px;
@@ -466,6 +471,10 @@ nav	{
 			padding: 12px 55px;
 			font-size: 18px;
 			text-transform: uppercase;
+			@include breakpoint(max-width 660px)	{
+				font-size: 14px;
+				padding: 8px 36px;
+			}
 		}
 	}
 	.arrows-wraper	{
@@ -498,6 +507,9 @@ nav	{
 				font-weight: 300;
 				@include breakpoint(orientation landscape)	{
 					font-size: 22px;
+				}
+				@include breakpoint(max-width 660px)	{
+					font-size: 24px;
 				}
 				&:before	{
 					@extend %middle-height-line;
