@@ -4,9 +4,17 @@ circle progress bar:
 
 http://codepen.io/saadeghi/pen/IBhfJ
 
+http://web.archive.org/web/20140213105950/http://itnewb.com/tutorial/Creating-the-Smooth-Scroll-Effect-with-JavaScript
+https://www.sitepoint.com/smooth-scrolling-vanilla-javascript/
+
+
+\/:
+
 responsywnoœæ za³atwoina na mobile zosta³a tylko strza³ka z jumbotron
 Firmy jpeg jest za du¿y przy s5
 przy mobile zmniejszyæ nag³ówki sekcji \/
+
+nawigowanie tabem po stronie
 
 JS po html i css:
 Menu po klikiniêciu poza menu siê chowa,
@@ -15,5 +23,3 @@ menu po klikniêciu linka siê chowa
 animacja w divie odpala siê po scrollu na tego diva
 p³ynny scroll
 
-http://web.archive.org/web/20140213105950/http://itnewb.com/tutorial/Creating-the-Smooth-Scroll-Effect-with-JavaScript
-https://www.sitepoint.com/smooth-scrolling-vanilla-javascript/
