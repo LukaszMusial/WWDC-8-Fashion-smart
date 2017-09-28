@@ -659,9 +659,11 @@ nav ul li a {
 .check-us-crprogress-bar svg:nth-child(2) circle {
   fill: none;
   stroke-width: 4;
-  stroke-dasharray: 691;
-  animation: start 10s;
   opacity: 0.9;
+}
+.check-us-crprogress-bar svg:nth-child(2) circle.active {
+  animation: start 10s;
+  stroke-dasharray: 691;
 }
 .check-us-crprogress-bar h3 {
   width: 100%;

@@ -623,9 +623,13 @@ nav	{
 			fill: none;
 			// stroke:"red";
 			stroke-width: 4;
-			stroke-dasharray: 691;
-			animation: start 10s;
+
+			
 			opacity: 0.9;
+		}
+		&:nth-child(2) circle.active	{
+			animation: start 10s;
+			stroke-dasharray: 691;
 		}
 	}
 	h3	{
