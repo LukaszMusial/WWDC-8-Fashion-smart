@@ -645,6 +645,11 @@ nav ul li a {
   }
 }
 
+.activate {
+  animation: start 10s;
+  stroke-dasharray: 691;
+}
+
 .check-us-crprogress-bar {
   width: 225px;
   margin-top: 40px;
@@ -660,10 +665,6 @@ nav ul li a {
   fill: none;
   stroke-width: 4;
   opacity: 0.9;
-}
-.check-us-crprogress-bar svg:nth-child(2) circle.active {
-  animation: start 10s;
-  stroke-dasharray: 691;
 }
 .check-us-crprogress-bar h3 {
   width: 100%;

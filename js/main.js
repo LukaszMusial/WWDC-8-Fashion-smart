@@ -88,12 +88,21 @@ $(document).ready(function(){
       }
     });
 
-  var sectionPos = $('#check-us').offset().top/2;
-  var documentEl = $(document);
+  var sectionPos = $('#check-us').offset().top/4;
+  // var documentEl = $(document);
   var activateEl = $('div.check-us-crprogress-bar svg:nth-child(2) circle');
+  // var activateEl = $('#circleAn');
+  // activateEl.addClass('activate');
+  // activateEl.setAttribute('class', 'activate');
+  // $("#circleAn").onclick(function() {
+  //   this.classList.add("activate");
+  // });
+/*setAttribute('class',*/
 
-  documentEl.on('scroll', function() {
-    if (documentEl.scrollTop() > sectionPos /*&& !activateEl.hassClass('active')*/) activateEl.addClass('active');
+  
+  $(document).on('scroll', function() {
+    if ($(this).scrollTop() > sectionPos/* && !activateEl.hassClass('active')*/)
+     /*activateEl.classList.add('activate')*/activateEl.attr("class", "activate");
   });
 
 });

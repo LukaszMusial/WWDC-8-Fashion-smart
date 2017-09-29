@@ -606,6 +606,10 @@ nav	{
 // background-color: red;
 // position: relative;
 }
+.activate	{
+	animation: start 10s;
+	stroke-dasharray: 691;
+}
 .check-us-crprogress-bar	{
 	// background-color: blue;
 	// width: 100%;
@@ -623,14 +627,13 @@ nav	{
 			fill: none;
 			// stroke:"red";
 			stroke-width: 4;
-
 			
 			opacity: 0.9;
 		}
-		&:nth-child(2) circle.active	{
-			animation: start 10s;
-			stroke-dasharray: 691;
-		}
+		// &:nth-child(2) circle.active	{
+		// 	animation: start 10s;
+		// 	stroke-dasharray: 691;
+		// }
 	}
 	h3	{
 		width: 100%;
