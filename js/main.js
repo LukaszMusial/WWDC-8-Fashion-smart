@@ -71,7 +71,7 @@ $(document).ready(function(){
           // Only prevent default if animation is actually gonna happen
           event.preventDefault();
           $('html, body').animate({
-            scrollTop: target.offset().top - navHeight
+            scrollTop: target.offset().top - navHeight + 1
           }, 1000, function() {
             // Callback after animation
             // Must change focus!
@@ -87,6 +87,8 @@ $(document).ready(function(){
         }
       }
     });
+
+
 
   var sectionPos = $('#check-us').offset().top/4;
   // var documentEl = $(document);
@@ -105,4 +107,23 @@ $(document).ready(function(){
      /*activateEl.classList.add('activate')*/activateEl.attr("class", "activate");
   });
 
+
+
+// 382 linia scss 
+
+  var menuCheckbox = $('.menu-btn');
+
+  $('section, .logo-social-wrapper, .menu ul li a[href*="#"]').on('click',function() {
+    menuCheckbox.attr('checked', false);
+  });
+
+  // menuCheckbox.on('click', function() {
+  //   if menuCheckbox.hasClass('hideInputMenu')) menuCheckbox.removeClass('hideInputMenu');
+  // });
+
+
+
+
 });
+// '.menu ul li a[href*="#"]'
+ // menuCheckbox.removeClass('hideInputMenu');hideInputMenu

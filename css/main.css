@@ -247,10 +247,10 @@ nav ul li a {
   -o-transition-property: max-height;
   -webkit-transition-property: max-height;
   transition-property: max-height;
-  -moz-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
 }
 @media (min-width: 740px) {
   .menu-wrapper ul {

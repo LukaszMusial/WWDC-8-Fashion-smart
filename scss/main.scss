@@ -242,7 +242,7 @@ nav	{
 		overflow: hidden;
 		max-height: 0;
 		@include transition-property(max-height);
-		@include transition-duration(.5s);
+		@include transition-duration(.4s);
 		// @include transition-timing-function(ease-out);
 		// transition: max-height .2s ease-out;
 		li	{
@@ -382,6 +382,10 @@ nav	{
 .menu-btn:checked ~ ul	{
 	max-height: 500px;
 }
+
+// .menu-btn.hideInputMenu:checked  ~ ul	{
+// 	max-height: 0px;
+// }
 
 .menu-btn:checked ~ .menu-icon .navicon {
 	background: transparent;
