@@ -1003,6 +1003,11 @@ nav	{
 .brands-lists	{
 	background: url('../img//brands/brands_S.png') center  no-repeat;  // pewnie zmiana na jpg jeśli sprite'y
 	height: 700px;
+	
+	@include breakpoint(max-width 520px)	{
+		background-size: contain;
+		height: 500px;
+	}
 	@include breakpoint(861px 1100px)	{
 		background: url('../img//brands/brands_M.png') center  no-repeat;
 	}
